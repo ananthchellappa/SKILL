@@ -1,6 +1,6 @@
-;; load "/home/USERNAME/skill/delPinAllCells.il"
-;load "/home/USERNAME/skill/CCS/CCSinvokeCdfCallbacks.il"
-;load "/home/USERNAME/skill/CCS/CCSCdfCallbackEntireLib.il"
+;; load "/home/USERNAME/SKILL/delPinAllCells.il"
+;load "/home/USERNAME/SKILL/CCS/CCSinvokeCdfCallbacks.il"
+;load "/home/USERNAME/SKILL/CCS/CCSCdfCallbackEntireLib.il"
 
 ; usage
 ; delPinAllCells( "myLib" "NOR*X" "pinName"  )

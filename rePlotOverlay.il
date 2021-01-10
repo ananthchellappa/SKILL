@@ -1,4 +1,4 @@
-load "/home/USERNAME/skill/unqList.il"
+load "/home/USERNAME/SKILL/unqList.il"
 
 procedure( rePlotOverlay()
 	; get the names of the existing plots.. assume ordinal number in list *is* strip #

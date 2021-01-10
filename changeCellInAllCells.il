@@ -1,4 +1,4 @@
-;; load "/home/USERNAME/skill/changeCellInAllCells.il"
+;; load "/home/USERNAME/SKILL/changeCellInAllCells.il"
 
 ; usage
 ; changeCellInAllCells( "myLib" "DFF" "nmos" "nmos4" ?oldLib "analogLib" ?newLib "ahdlLib" ?doChkSav t)

@@ -11,7 +11,7 @@ procedure( zoomInst(CLIPDATA)
 ; ; ; trial and tribulation - \\ gets you one past cadence, you need one
 ; ; ; more to get past perl
 ; ;         ipcWaitForProcess(cid)
-; ; ; from look at the IPC skill reference
+; ; ; from look at the IPC SKILL reference
 ; ;         text = ipcReadProcess(cid 1)
 ; ;         println(text)
         instPath = parseString(CLIPDATA ".")    ; typically what sim output is..

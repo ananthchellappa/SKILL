@@ -11,7 +11,7 @@ procedure( HSIMnode(HSIMfile)
         sprintf( index "%d" HSIMnodePtr)
         cmd = buildString( list( "~/perl/HSIM_node.pl" HSIMfile index) )
         cid = ipcBeginProcess( cmd )
-; from look at the IPC skill reference
+; from look at the IPC SKILL reference
         ipcWaitForProcess(cid)
         text = ipcReadProcess(cid 1)
 

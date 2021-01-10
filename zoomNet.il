@@ -8,7 +8,7 @@ procedure( zoomNet()
         cid = ipcBeginProcess("~/bin/myXclip")
 ; that is 
 ; xclip -o | perl -p -e 's/\\//g;s/VT\("\/([^"]+)"\)/$1/;s/\//./g;'
-; from look at the IPC skill reference
+; from look at the IPC SKILL reference
         ipcWaitForProcess(cid)
         text = ipcReadProcess(cid 1)
 ; ; from Vikas

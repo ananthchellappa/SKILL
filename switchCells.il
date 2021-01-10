@@ -1,6 +1,6 @@
-;; load "/home/USERNAME/skill/switchCells.il"
-load "/home/USERNAME/skill/CCS/CCSchangeCells.il"
-load "/home/USERNAME/skill/unqList.il"
+;; load "/home/USERNAME/SKILL/switchCells.il"
+load "/home/USERNAME/SKILL/CCS/CCSchangeCells.il"
+load "/home/USERNAME/SKILL/unqList.il"
 
 ; usage
 ; switchCells( "NAND" "NOR" "TSMC023")

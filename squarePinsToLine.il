@@ -1,4 +1,4 @@
-; load "/home/USERNAME/skill/squarePinsToLine.il"
+; load "/home/USERNAME/SKILL/squarePinsToLine.il"
 
 defLinePinLen = 0.125           ; AC 3/9/13
 

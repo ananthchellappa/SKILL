@@ -1,4 +1,4 @@
-load "/home/USERNAME/skill/note_lib_cell.i1"
+load "/home/USERNAME/SKILL/note_lib_cell.i1"
 procedure( openSelReadOnly()
 
    let( (inst cv libCell );local variables

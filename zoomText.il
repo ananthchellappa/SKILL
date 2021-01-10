@@ -1,4 +1,4 @@
-; load "/home/USERNAME/skill/zoomText.il"
+; load "/home/USERNAME/SKILL/zoomText.il"
 
 
 procedure( zoomText()

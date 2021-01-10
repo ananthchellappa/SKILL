@@ -1,6 +1,6 @@
-; was out of touch with skill when I did this
+; was out of touch with SKILL when I did this
 ; had forgotten about xCoord and yCoord
-; load "/home/USERNAME/skill/arrows.il"
+; load "/home/USERNAME/SKILL/arrows.il"
 
 procedure( arrows(  )
     let( (cv win pllx purx lllx lurx line xL yL )

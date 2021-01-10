@@ -2,7 +2,7 @@
 ;*******************************************************************************
 ; The following alias is used to make the bindKey definitions more readable.
 ;*******************************************************************************
-; use : load "/home/felder/skill/mattsBindKeys.il"
+; use : load "/home/felder/SKILL/mattsBindKeys.il"
 
 alias bk hiSetBindKey
 

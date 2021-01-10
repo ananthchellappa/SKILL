@@ -1,4 +1,4 @@
-; load "/home/USERNAME/skill/listInstPaths.il"
+; load "/home/USERNAME/SKILL/listInstPaths.il"
 
 
 procedure( listInstPaths()

@@ -1,4 +1,4 @@
-; load "/home/USERNAME/skill/roundPinsToLine.il"
+; load "/home/USERNAME/SKILL/roundPinsToLine.il"
 
 defLinePinLen = 0.125           ; AC 3/9/13
 
