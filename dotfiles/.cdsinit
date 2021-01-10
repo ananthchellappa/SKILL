@@ -1,0 +1,122 @@
+loadi("/home/USERNAME/SKILL/CCSkey.il")
+; 9/1/16 : when moving to 6.1.7 -- commented out below
+; hiSetFont("text" "-*-courier-medium-r-*-*-14-*" )
+hiSetFont("text" ?name "Courier 10 Pitch" ?size 15 ?bold nil ?italic nil)
+hiSetFont("label" ?name "Sans Serif" ?size 15 ?bold nil ?italic nil)
+hiSetFont("ciw" ?name "Courier 10 Pitch" ?size 16 ?bold nil ?italic nil)
+
+editor="nedit"
+
+; envSetVal("schematic" "descendTarget" 'string "use viewNameList")
+
+
+
+
+foreach(application '("Schematics" "Show File" "Symbol" "Graphics Browser" "Layout")
+hiSetBindKey( application "Ctrl<Btn4Down>" "hiZoomInAtMouse()")
+hiSetBindKey( application "Ctrl<Btn5Down>" "hiZoomOutAtMouse()")
+hiSetBindKey( application "Shift<Btn4Down>" "geScroll(nil \"w\" nil)")
+hiSetBindKey( application "Shift<Btn5Down>" "geScroll(nil \"e\" nil)")
+hiSetBindKey( application "<Btn4Down>" "geScroll(nil \"n\" nil)")
+hiSetBindKey( application "<Btn5Down>" "geScroll(nil \"s\" nil)") )
+
+; Solution ID:	20138670
+; vivaInitSetup() ; no longer needed Vikas Bhargava 6/29/18
+callInitProc("viva")
+; envSetVal("viva.axis" "font" 'string "Clean,10,-1,5,50,0,0,0,0,0") 
+
+envSetVal("viva.traceLegend" "font" 'string "Default,12,-1,5,55,0,0,0,0,0") 
+envSetVal("viva.traceLegend" "printSaveImageFont" 'string "Default,11,-1,5,55,0,0,0,0,0") 
+
+procedure( itos( integer )
+    sprintf( NULL "%d" integer)
+)
+
+;load(strcat(getShellEnvVar("AFS_ROOT") "/3rdParty/cdsinit-bda"))
+
+envSetVal("asimenv.loadstate" "modelSetup" 'boolean t)
+
+; working with Pragati Kumar 46006198 trying to get instances with inh conns to probed
+; net to be highlighted..
+
+envSetVal("graphic" "probeNetDisplayHierarchyLevel" 'int 100)
+envSetVal("graphic" "probeTraverseHierarchy" 'boolean t) 
+; found below one to not be necessary
+; envSetVal("graphic" "probeConnectedInstances" 'boolean t)
+
+; Likesh Sahoo on 46025233
+; envSetVal("graphic" "probeNetDisplayHierarchyLevel" 'int 5) envSetVal("graphic" "probeTraverseHierarchy" 'boolean t) envSetVal("graphic" "probeConnectedInstances" 'boolean t)
+
+
+; to prevent the annoying SOS dialog that gates exit from Cadence
+sosShowCheckOutsOnExit = nil
+
+; Rajni Dhiman -- why does 15.2 exit ADE-XL MOnte Carlo with the process only..
+; magnachip
+envSetVal("spectre.opts" "additionalArgs" 'string "ignorezerovar=yes")
+envSetVal("adexl.monte" "icrpEvaluation" 'boolean 't)  
+
+; Jayant - how to set schematic object selection options
+schSetEnv("schematicSelectFilter" '("allSchObj" "instancePin") )
+
+; Harinarayan Yadav 46019140 -- getting schematic instance selection to reflect in Hierarchy Editor
+; below only works for Hierarchy Editor --> Schematic
+; envSetVal("schematic" "broadcast" 'boolean t)
+; doesn't work here, but works in .cdsenv. Why?
+
+load( "/home/USERNAME/SKILL/CCS/CCSCreateSymbolMenu.il" )
+
+;------------ from Kris Fullerton for EAD productivity
+; This loads your EAD initializations when you launch the EAD tool. The path assumes that the .cdsinit file is in your invocation directory
+;; envSetVal("layoutEAD" "useSetup" 'string "./.cadence/dfII/EAD/1/setup/HP18E80_TF_IC6_4LM.ini")
+;; see if duplicate drop down menu entry for process goes away..
+
+; This variable will automatically display the detailed res/cap values in the EAD interface
+envSetVal("layoutEAD.gui" "detailedParasiticTables" 'boolean t)
+
+; These variables stop some of those prompts about the constraint view when you create a dataset for EM
+envSetVal("elec.gui" "warnOnCacheEdit" 'boolean nil)
+envSetVal("elec.gui" "warnOnCacheSave" 'boolean nil)
+
+; This will show resistors even for nets that do not have EM violations. 
+envSetVal("layoutEAD.gui" "emResultsShowAllResistors" 'boolean t)
+
+; This one stores pathsto datasets relative rather than absolute. Makes things much easier if you do a unix copy of the simulation setup and then want to reference the dataset later
+envSetVal("ei.dataSet" "storeRelativePaths" 'boolean t)
+;------------ from Kris for EAD
+
+; for preferred instance naming as x<cellname>_ (prefix) .. Ankush Gupta
+deRegUserTriggers("schematicSymbol" nil nil 'setInstNamePrefix  )
+dbClose( dbOpenCellViewByType( "analogLib" "vdc" "symbol" ) )
+
+; thank you Mike
+pteSetValidity("text drawing2" t "Layers")
+
+ddsOpenLibManager()
+
+
+; 9/28/18
+; schematic       schGridType     cyclic  "none"
+
+load_all_settings=t ; if you are someone else, then change this :)
+if( load_all_settings 
+then
+	println("Loading additional settings")
+	println("Turning off grid")
+	envSetVal("schematic" "schGridType" 'cyclic "none" )
+	
+)
+
+println("Now saving default bindkeys")
+
+loadi("/home/USERNAME/SKILL/CCS/CCSexportAllBindKeys.il")
+loadi("/home/USERNAME/SKILL/toggleBindkeys.il" )
+logpath = getShellEnvVar("CDS_LOG_PATH")
+CCSexportAllBindKeys( buildString( list(logpath "std_bks.il" ) "/" ) )
+loadi("/home/USERNAME/SKILL/bindkeys.il") 	; 12/28/18 moved to end
+println("C U S T O M bindkeys loaded. Use CTRL+SHIT+T to toggle between custom/default")
+hiSetBindKey("Schematics" "Ctrl Shift<Key>t" "toggleBindkeys()")
+hiSetBindKey("Command Interpreter" "Ctrl Shift<Key>t" "toggleBindkeys()")
+
+
+

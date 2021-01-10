@@ -1,0 +1,62 @@
+license	VLSL_UseNextLicense	string	"never"
+ms.envOpts disciplineInfo boolean t
+
+; envSetVal("schematic" "schematicSelectFilter" 'string "allSchObj instancePins")
+
+; envSetVal("ui" "enableMenuShortcuts" boolean nil)
+
+ui enableMenuShortcuts boolean nil
+
+schematic schematicSelectFilter string "allSchObj instancePins"
+
+; to keep IC5 style 2x2 major grid points
+graphic dotStyleMajorGrid boolean t
+layout dotStyleMajorGrid boolean t
+; ramesh 42855478
+
+;envSetVal("viva.rectGraph" "stripChartOn" 'string "1")
+;envSetVal("viva.trace" "lineThickness" 'string "medium")
+
+viva.rectGraph stripChartOn string "1"
+viva.trace lineThickness string "medium"
+viva.rectGraph legendPosition string "above"
+viva.traceLegend font string "Default,18,-1,5,55,0,0,0,0,0"
+
+; ; S Pradeep Raja SR 42840292 CCR 1008543
+;
+; envSetVal("graphic" "probeNetDisplayHierarchyLevel" 'int 5)  ;   -> Define the maximum depth of the probe
+; envSetVal("graphic" "probeTraverseHierarchy" 'boolean t)     ;   -> Allow to descend into hierarchy
+;
+; graphic probeNetDisplayHierarchyLevel int 5
+; ;   -> Define the maximum depth of the probe
+; graphic probeTraverseHierarchy boolean t
+; ;   -> Allow to descend into hierarchy
+; graphic probeConnectedInstances boolean t
+; ;  -> Probe instance having a probe connected in the lower hierarchy
+
+; Harinarayan Yadav
+schematic broadcast boolean t
+
+schematic tsgTemplateType string "artist"
+
+; 46015167
+
+layout netTracerOn boolean t
+
+; for SOS :
+
+cdsLibManager.customize	showDFIIWarning	boolean	nil
+cdsLibManager.main	categoryText	string	""
+cdsLibManager.main	showFilesOn	boolean	nil
+cdsLibManager.main	showCategoriesOn	boolean	t
+cdsLibManager.main	libraryText	string	""
+cdsLibManager.main	cellLevelText	string	""
+
+; from Stephen Hazen
+
+ui      ciwRetainUniqueCmds     boolean t
+ui      raiseCIWonError boolean t
+ui      raiseCIWonWarning       boolean t
+
+; from M Nix
+schematic   srcPinNetCollision           cyclic    "warning"
