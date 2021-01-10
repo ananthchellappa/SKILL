@@ -1,0 +1,10 @@
+procedure(CCSSelectWire(bBox)
+let((cv lines allobj)
+cv=geGetWindowCellView()
+
+geSelectArea(hiGetCurrentWindow() bBox)
+allobj=geGetSelSet(cv)
+lines=setof(x allobj  x~>objType=="line")
+geDeselectAllFig(cv)
+geSelectFigs(lines)
+))

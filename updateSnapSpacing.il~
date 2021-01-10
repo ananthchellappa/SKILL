@@ -1,0 +1,14 @@
+procedure( updateSnapSpacing( factor )
+
+    let( (snap)
+
+    schHiDisplayOptions()
+    hiiSetCurrentForm('schDisplayOptionsForm)
+    snap = schDisplayOptionsForm->snapSpacing->value
+    schDisplayOptionsForm->snapSpacing->value = snap*factor
+    hiFormDone(schDisplayOptionsForm)
+;     hiFormCancel(schDisplayOptionsForm)
+
+    )   ; let
+
+)   ; procedure

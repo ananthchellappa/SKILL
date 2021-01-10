@@ -1,0 +1,9 @@
+DEFINE cdsDefTechLib $(compute:THIS_TOOL_INST_ROOT)/tools/dfII/etc/cdsDefTechLib
+DEFINE basic $(compute:THIS_TOOL_INST_ROOT)/tools/dfII/etc/cdslib/basic
+DEFINE analogLib $(compute:THIS_TOOL_INST_ROOT)/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE US_8ths $(compute:THIS_TOOL_INST_ROOT)/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE gpdk090 ./gpdk090_v4.0/libs.oa22/gpdk090
+DEFINE master ./master
+DEFINE pCells ./pCells
+DEFINE tutorial ./tutorial
+DEFINE cellTechLib ./cellTechLib

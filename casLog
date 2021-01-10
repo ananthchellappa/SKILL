@@ -1,0 +1,17 @@
+
+*** Check Against Source on ('master' 'mux2' 'layout') - Thu May 24 10:59:30 2012 ***
+
+INFO (LX-1013): Instance terminal 'A' is missing from layout instance 'I1'.
+INFO (LX-1013): Instance terminal 'A' is missing from layout instance '|I0'.
+INFO (LX-1013): Instance terminal 'A' is missing from layout instance '|I3'.
+INFO (LX-1013): Instance terminal 'A' is missing from layout instance '|I6'.
+INFO (LX-1013): Instance terminal 'B' is missing from layout instance 'I1'.
+INFO (LX-1013): Instance terminal 'B' is missing from layout instance '|I0'.
+INFO (LX-1013): Instance terminal 'B' is missing from layout instance '|I3'.
+INFO (LX-1013): Instance terminal 'Y' is missing from layout instance 'I1'.
+INFO (LX-1013): Instance terminal 'Y' is missing from layout instance '|I0'.
+INFO (LX-1013): Instance terminal 'Y' is missing from layout instance '|I3'.
+INFO (LX-1013): Instance terminal 'Y' is missing from layout instance '|I6'.
+
+*** Check Against Source complete. ***
+

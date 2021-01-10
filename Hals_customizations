@@ -1,0 +1,144 @@
+envSetVal("viva.graph" "titleFont" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.axis" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.horizMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.referenceLineMarker" "font" 'string "Courier [Adobe],10,-1,5,55,0,0,0,0,0")
+envSetVal("viva.vertMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.pointMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.refPointMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.specMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.interceptMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.circleMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.multiDeltaMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.transEdgeMarker" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.graphLabel" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+envSetVal("viva.polarGrid" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0") 
+envSetVal("viva.smithGrid" "font" 'string "Courier [Adobe],10,-1,5,50,0,0,0,0,0")
+
+procedure(abq_EditSch()
+  let( ()
+    schSetEnv("descendTarget" "use viewNameList")
+    getCurrentWindow()->viewNameList = '("schematic" "cmos.sch")
+    schHiDescendEdit()
+    schSetEnv("descendTarget" "query user")
+  )
+)
+
+procedure(abq_ReadSch()
+  let( ()
+    schSetEnv("descendTarget" "use viewNameList")
+    getCurrentWindow()->viewNameList = '("schematic" "cmos.sch")
+    schHiDescendRead()
+    schSetEnv("descendTarget" "query user")
+  )
+)
+
+procedure(abq_EditSym()
+  let( ()
+     schSetEnv("descendTarget" "use viewNameList")
+     getCurrentWindow()->viewNameList = "symbol"
+     schHiDescendEdit()
+     schSetEnv("descendTarget" "query user")
+  )
+)
+
+procedure(abq_ReadSym()
+  let( ()
+     schSetEnv("descendTarget" "use viewNameList")
+     getCurrentWindow()->viewNameList = "symbol"
+     schHiDescendRead()
+     schSetEnv("descendTarget" "query user")
+  )
+)
+hiSetBindKey( "Schematics" "<Key>e" "abq_ReadSch()")
+hiSetBindKey( "Schematics" "<Key>/" "abq_ReadSym()")
+hiSetBindKey( "Schematics" "Shift<Key>." "abq_EditSch()")
+hiSetBindKey( "Schematics" "Shift<Key>/" "abq_EditSym()")
+hiSetBindKey( "Schematics" "Shift<Key>c" "schHiChangeEditMode(\"a\")")
+hiSetBindKey( "Schematics" "<Key>b" "schHiReturn()")
+
+
+procedure( windowsPopUp()
+	windowList = foreach( mapcar wid hiGetWindowList()
+		hiGetWindowName( wid )
+	) ; end foreach
+	windowList = cons("LSW" windowList)
+	callbackList = foreach( mapcar wid hiGetWindowList();
+		sprintf(
+			nil
+			"hiRaiseWindow( window( %d ))"
+			wid->windowNum
+		)
+	);end foreach
+	callbackList = cons( "LSWCB()" callbackList )
+	hiDisplayMenu(
+		hiCreateSimpleMenu(
+			'windowsPopUp
+			"Windows"
+			windowList
+			callbackList
+			"" ; empty help string
+		); end hiCreateSimpleMenu
+	);end hiDisplayMenu
+); end procedure
+
+procedure( LSWCB()
+	leIconifyLSW()
+	if( leiGetLSWCurrentLib() then
+		ipcSleep( 1 )
+		leDeiconifyLSW()
+	) ; end if
+); end procedure
+
+;hiSetBindKey( "Command Interpreter" "<Key>F6" "windowsPopUp()")
+;hiSetBindKey( "Schematics" "<Key>r" "windowsPopUp()")
+;hiSetBindKey( "Symbol" "<Key>r" "windowsPopUp()")
+	
+ddsOpenLibManager();
+hiSetBindKey( "Layout" "Ctrl<Key>Left"            "leMoveCursor( -0.1   0.0)" )
+hiSetBindKey( "Layout" "Ctrl<Key>Right"           "leMoveCursor(  0.1   0.0)" )
+hiSetBindKey( "Layout" "Ctrl<Key>Up"              "leMoveCursor(  0.0   0.1)" )
+hiSetBindKey( "Layout" "Ctrl<Key>Down"            "leMoveCursor(  0.0  -0.1)" )
+hiSetBindKey( "Layout" "<Key>F5"  "hiCloseWindow(getCurrentWindow())"  )
+hiSetBindKey( "Layout" "Shift<Key>Up" "wayScrollBig( \"n\" )" )
+hiSetBindKey( "Layout" "Shift<Key>Down" "wayScrollBig( \"s\" )" )
+hiSetBindKey( "Layout" "Shift<Key>Right" "wayScrollBig( \"e\" )" )
+hiSetBindKey( "Layout" "Shift<Key>Left" "wayScrollBig( \"w\" )" )
+hiSetBindKey( "Layout" "None<Btn2Down>" "windowsPopUp()")
+
+
+hiSetBindKey( "Schematics" "Ctrl<Key>g"  "schHiDeleteAllMarker()"             )
+hiSetBindKey( "Schematics" "<Key>F5"  "hiCloseWindow(getCurrentWindow())"  )
+hiSetBindKey( "Schematics" "Shift<Key>z"  "hiZoomRelativeScale(getCurrentWindow() 0.75)"  )
+hiSetBindKey( "Schematics" "<Key>f" "schZoomFit( 1.0 1.0 )")
+hiSetBindKey( "Schematics" "Shift<Key>Up" "wayScrollBig( \"n\" )" )
+hiSetBindKey( "Schematics" "Shift<Key>Down" "wayScrollBig( \"s\" )" )
+hiSetBindKey( "Schematics" "Shift<Key>Right" "wayScrollBig( \"e\" )" )
+hiSetBindKey( "Schematics" "Shift<Key>Left" "wayScrollBig( \"w\" )" )
+hiSetBindKey( "Schematics" "Ctrl<Key>p" "schHiPlot()")
+hiSetBindKey( "Schematics" "None<Btn2Down>" "windowsPopUp()")
+
+hiSetBindKey( "Symbol" "<Key>F5"  "hiCloseWindow(getCurrentWindow())"  )
+hiSetBindKey( "Symbol" "<Key>b" "schHiReturn()")
+hiSetBindKey( "Symbol" "Ctrl<Key>p" "schHiPlot()")
+hiSetBindKey( "Symbol" "Shift<Key>c" "schHiChangeEditMode(\"a\")")
+hiSetBindKey( "Symbol" "Shift<Key>Up" "wayScrollBig( \"n\" )" )
+hiSetBindKey( "Symbol" "Shift<Key>Down" "wayScrollBig( \"s\" )" )
+hiSetBindKey( "Symbol" "Shift<Key>Right" "wayScrollBig( \"e\" )" )
+hiSetBindKey( "Symbol" "Shift<Key>Left" "wayScrollBig( \"w\" )" )
+hiSetBindKey( "Symbol" "None<Btn2Down>" "windowsPopUp()")
+
+hiSetBindKey( "Command Interpreter" "<Key>F5" "deNew()")
+
+
+
+
+
+procedure( wayScrollBig( scrollDir )
+  let(( scrollPercent )
+  
+    scrollPercent = geGetScrollPercent();
+    geSetScrollPercent(90);
+    geScroll( nil scrollDir nil );
+    geSetScrollPercent(scrollPercent);
+  );end let
+); end procedure
