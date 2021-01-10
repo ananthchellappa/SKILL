@@ -1,0 +1,5 @@
+procedure(hiSelectSymPins(  )
+    hiRegTimer("hiFormDone(schSymSelectPropForm)" 8)
+    hiRegTimer("hiiSetCurrentForm('schSymSelectPropForm)" 5)
+schHiSelectByProperty("select")
+)
