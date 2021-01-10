@@ -1,7 +1,7 @@
-load "/home/achellappa/skill/clio/chkOutCells.il"
-load "/home/achellappa/skill/updatePropAllCells.il"
-load "/home/achellappa/skill/switchCells.il"
-load "/home/achellappa/skill/changeCellInAllCells.il"
+load "/home/USERNAME/skill/clio/chkOutCells.il"
+load "/home/USERNAME/skill/updatePropAllCells.il"
+load "/home/USERNAME/skill/switchCells.il"
+load "/home/USERNAME/skill/changeCellInAllCells.il"
 
 
 chkOutCells( "ESD_PadCage_v17" "ESD30VactW8" )

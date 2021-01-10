@@ -1,4 +1,4 @@
-; load "/home/achellappa/skill/toglImportSplitRseg.il"
+; load "/home/USERNAME/skill/toglImportSplitRseg.il"
 
 ; FYI, these settings are accessible through (in LayoutXL) :
 ; Options > LayoutXL > Schematic Parameters tab

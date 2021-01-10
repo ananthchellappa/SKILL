@@ -1,5 +1,5 @@
-load "/home/achellappa/skill/CCS/CCSinvokeCdfCallbacks.il"
-load "/home/achellappa/skill/CCS/CCSCdfCallbackEntireLib.il"
+load "/home/USERNAME/skill/CCS/CCSinvokeCdfCallbacks.il"
+load "/home/USERNAME/skill/CCS/CCSCdfCallbackEntireLib.il"
 
 ; usage
 ; updateInstNameAllCells( "myLib" "NOR*X" "NM23" "NMdrive" )

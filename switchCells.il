@@ -1,6 +1,6 @@
-;; load "/home/achellappa/skill/switchCells.il"
-load "/home/achellappa/skill/CCS/CCSchangeCells.il"
-load "/home/achellappa/skill/unqList.il"
+;; load "/home/USERNAME/skill/switchCells.il"
+load "/home/USERNAME/skill/CCS/CCSchangeCells.il"
+load "/home/USERNAME/skill/unqList.il"
 
 ; usage
 ; switchCells( "NAND" "NOR" "TSMC023")

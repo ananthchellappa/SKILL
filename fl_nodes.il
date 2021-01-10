@@ -3,7 +3,7 @@
 
 procedure( fl_nodes_start()
 
-	cid = ipcBeginProcess("~achellappa/perl/proc_flnode.pl /tmp/fl_node_report_$USER.txt 0")
+	cid = ipcBeginProcess("~USERNAME/perl/proc_flnode.pl /tmp/fl_node_report_$USER.txt 0")
 	hiRegTimer("CLIPDATA = ipcReadProcess( cid )" 10)
 	ipcWaitForProcess(cid 1)
 		println("Here's the text : ")
@@ -14,7 +14,7 @@ procedure( fl_nodes_start()
 
 procedure( next_fl_node()
 
-	cid = ipcBeginProcess("~achellappa/perl/proc_flnode.pl /tmp/fl_node_report_$USER.txt")
+	cid = ipcBeginProcess("~USERNAME/perl/proc_flnode.pl /tmp/fl_node_report_$USER.txt")
 	hiRegTimer("CLIPDATA = ipcReadProcess( cid )" 10)
 	ipcWaitForProcess(cid 1)
 

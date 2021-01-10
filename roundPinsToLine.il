@@ -1,4 +1,4 @@
-; load "/home/achellappa/skill/roundPinsToLine.il"
+; load "/home/USERNAME/skill/roundPinsToLine.il"
 
 defLinePinLen = 0.125           ; AC 3/9/13
 
@@ -18,7 +18,7 @@ procedure(roundPinsToLine()
 						then
 							mast = dbOpenCellViewByType(win->cellView->lib->name "linePin" "symbol" "schematicSymbol" "r" )
 						else
-							system(sprintf(nil "cp -R /home/achellappa/cadence/myVeriloga/linePin %s/" win->cellView->lib->readPath))
+							system(sprintf(nil "cp -R /home/USERNAME/cadence/myVeriloga/linePin %s/" win->cellView->lib->readPath))
 							printf("*INFO* Symbol master cellView \"linePin\" created in current library.\n")
 							mast = dbOpenCellViewByType(win->cellView->lib->name "linePin" "symbol" "schematicSymbol" "r" )
 						)

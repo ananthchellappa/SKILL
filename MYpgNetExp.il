@@ -1,4 +1,4 @@
-; load "/home/achellappa/skill/MYpgNetExp.il"
+; load "/home/USERNAME/skill/MYpgNetExp.il"
 ;  46024614 -- 
 
 ; Started with solution ID 20309633
