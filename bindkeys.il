@@ -574,3 +574,10 @@ load "/home/USERNAME/SKILL/utils/plotTextWaves.il"
 hiSetBindKey("Schematics" "Ctrl Shift<Key>w" "plotTextWaves()")
 
 hiSetBindKey("Schematics" "Alt <Key>s" "_schHiSave()")
+
+load "/home/USERNAME/SKILL/utils/tag_labels.il"
+hiSetBindKey("Schematics" "Ctrl Alt<Key>_" "tag_labels()")
+
+load "/home/USERNAME/SKILL/utils/toglOnlyWireLblSel.il"
+hiSetBindKey("Schematics" "Ctrl Shift<Key>w" "toglOnlyWireLblSel()")
+
