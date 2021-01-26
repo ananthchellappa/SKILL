@@ -1,14 +1,8 @@
 procedure( toglOnlyWireLblSel()
-    hiRegTimer("
-        hiiSetCurrentForm('schSchSelectForm)
-        if( schSchSelectForm->allNone->all->value
-        then
-            schSchSelectForm->allNone->none->value = t
-            schSchSelectForm->objects->wireName->value = t
-        else
-            schSchSelectForm->allNone->all->value = t
-        )
-        hiFormDone(schSchSelectForm)" 5
-    )
-    schSetSelectOptions()
+	if( member( "allSchObj" schGetEnv("schematicSelectFilter") )
+	then
+		schSetEnv( "schematicSelectFilter" cons( "wireName" setof( x schGetEnv("schematicSelectFilter") x != "allSchObj" ) ) )
+	else
+		schSetEnv( "schematicSelectFilter" cons( "allSchObj" schGetEnv("schematicSelectFilter") ) )
+	)
 )
