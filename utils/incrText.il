@@ -9,7 +9,7 @@ procedure( incrText( incDecb ) ; 1 for increment, -1 for decrement (so not truly
             then
                 if( rexMatchp( "^[a-zA-Z]$" master~>theLabel )
                 then
-                    base = charToInt( stringToSymbol( master~>theLabel ) l
+                    base = charToInt( stringToSymbol( master~>theLabel ) )
                     foreach( obj cdr( geGetSelSet() )
                         obj~>theLabel = symbolToString( intToChar( base + incDecb ) )
                         base = base + incDecb
@@ -25,7 +25,7 @@ procedure( incrText( incDecb ) ; 1 for increment, -1 for decrement (so not truly
                     )
                 ) ; if
             else
-                if( rexMatchp( "^[a-zA-Z]$" master~>theLabel }
+                if( rexMatchp( "^[a-zA-Z]$" master~>theLabel )
                 then
                     master~>theLabel = symbolToString( intToChar( incDecb + charToInt( stringToSymbol( master~>theLabel ) ) ) )
                 else
