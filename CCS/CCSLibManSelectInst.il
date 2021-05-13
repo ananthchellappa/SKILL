@@ -1,5 +1,5 @@
 procedure(CCSLibManSelectInst()
-
+	ddsOpenLibManager() 	; Added 1/10/19
    let((inst cv refLib);local variables
 
 	if( 0 < length( geGetSelSet() ) 

@@ -23,12 +23,12 @@ load("/home/USERNAME/SKILL/utils/MYappendSignal.il")
 load("/home/USERNAME/SKILL/utils/MYappendAllSignal.il")
 load("/home/USERNAME/SKILL/utils/updateSnapSpacing.il")
 
-load("/home/USERNAME/SKILL/CCSDescend.il")
+load("/home/USERNAME/SKILL/utils/CCSDescend.il")
 ; 6/27/18
 load("/home/USERNAME/SKILL/utils/newDescend.il")
 
-load("/home/USERNAME/SKILL/CCSkey.il")
-load("/home/USERNAME/SKILL/CCSrestoreDefaultWireColors.il")
+load("/home/USERNAME/SKILL/utils/CCSkey.il")
+load("/home/USERNAME/SKILL/utils/CCSrestoreDefaultWireColors.il")
 load("/home/USERNAME/SKILL/utils/awvGrid.il")
 load("/home/USERNAME/SKILL/utils/applify.il")
 ; load("/home/USERNAME/SKILL/utils/sch_print_L.il")
@@ -581,3 +581,6 @@ hiSetBindKey("Schematics" "Ctrl Alt<Key>_" "tag_labels()")
 load "/home/USERNAME/SKILL/utils/toglOnlyWireLblSel.il"
 hiSetBindKey("Schematics" "Ctrl Shift<Key>w" "toglOnlyWireLblSel()")
 
+load "/home/USERNAME/SKILL/utils/HEDoffTopCellGlobalBindings.il"
+hiSetBindKey("Cadence Hierarchy Editor" "Ctrl <Key>1" "HEDoffTopCellGlobalBindings()" )
+hiSetBindKey("Schematics" "Ctrl <Key>1" "HEDoffTopCellGlobalBindings()" )

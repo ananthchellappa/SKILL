@@ -1,4 +1,4 @@
-loadi("/home/USERNAME/SKILL/CCSkey.il")
+loadi("/home/USERNAME/SKILL/utils/CCSkey.il")
 ; 9/1/16 : when moving to 6.1.7 -- commented out below
 ; hiSetFont("text" "-*-courier-medium-r-*-*-14-*" )
 hiSetFont("text" ?name "Courier 10 Pitch" ?size 15 ?bold nil ?italic nil)

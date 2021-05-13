@@ -9,8 +9,8 @@ ipcWaitForProcess(cid 1)
 
 hiSetBindKey("Schematics" "Alt<Key>h" "CCSclip() hiRegTimer(\"zoomNetVA(CLIPDATA)\" 10)")
 
-procedure( zoomNetVA(CLIPDATA)
-    let(( cid text node nodePath instList xx fig prsOp itrName itrNum l r)
+procedure( zoomNetVA(CLIPDATA @optional (zoom 't) )
+    let(( cid text node nodePath instList xx fig prsOp itrName itrNum l r curPath oneAbove )
 
 ;		println("Here's the text : ")
 		println(CLIPDATA)
@@ -23,13 +23,33 @@ procedure( zoomNetVA(CLIPDATA)
 		instPath = buildString( append( list("") instList ) "/" )
 ;		println( instPath )
 		
-		if(	geGetInstHier(hiGetCurrentWindow()) != instPath
+; here's where we need more intelligence - if the instPath contains the current path,
+; then, don't return to top.. so, need to regex hacks..
+
+		curPath = geGetInstHier( hiGetCurrentWindow() )
+		if(	curPath != instPath
 		then
- 			if( (geGetWindowCellView() != geGetTopLevelCellView() )
- 			        schHiReturnToTop()
- 			) ; if
+			if( rexMatchp( curPath instPath )	; that is current path is a substring of..
+			then
+				rexCompile( strcat(curPath "/" ) )
+				instList = parseString( rexReplace( instPath  "" 1 ) "/" ) 
+			else
+			; check if we can get there by just popping back up one..
+				oneAbove = buildString( reverse( cdr( reverse( parseString( curPath "/" )  ) ) ) "/" )
+				if( rexMatchp( oneAbove instPath )
+				then
+					rexCompile( strcat( oneAbove "/" ) )
+					instList = parseString( rexReplace( instPath  "" 1 ) "/" )
+					schHiReturn()
+				else
+ 					if( (geGetWindowCellView() != geGetTopLevelCellView() )
+ 					        schHiReturnToTop()
+ 					) ; if
+				) ; if rexMatch upToHere
+			) ; if rexMatch..
 			hierDescend( instList )
 		)	; 11/17/16
+
 
         prsOp = parseString(node "<>") ; a<2> --> "a" "2"
         if( (length(prsOp) > 1)
@@ -72,9 +92,13 @@ procedure( zoomNetVA(CLIPDATA)
             geSelectObject(fig)
         ) ; if
         
+;		schHiZoomToSelect() is an option
 		schZoomFit( 1.0 0.9 )
         hiPan( hiGetCurrentWindow() centerBox(car(geGetSelSet())~>bBox))
-        hiZoomRelativeScale( hiGetCurrentWindow() 3.0)
+		if( zoom
+		then
+        	hiZoomRelativeScale( hiGetCurrentWindow() 3.0)
+		)
 		geDeleteAllProbe(getCurrentWindow() t)
 ;		hiRegTimer( "geEnterAddNetProbe( hiGetCurrentWindow() list( \"y5\" \"drawing\") )" 20 )
 ;		geSetProbeUserLPP( list( "y5" "drawing") )
