@@ -10,6 +10,13 @@
 
 procedure(schIncreasePinSpacing( space )
 	let( ( direction unitsep obj count snapSpacing newx newy firstx firsty firstxy lastxy add)
+
+		foreach( obj geGetSelSet()
+			if( ! obj~>pin
+				geDeselectObject( obj )
+			)
+		)
+
         firstxy = car( geGetSelSet() )~>xy
         lastxy = car( reverse(geGetSelSet() ) )~>xy
 		snapSpacing	= envGetVal("schematic" "symSnapSpacing")
