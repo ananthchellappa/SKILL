@@ -584,3 +584,7 @@ hiSetBindKey("Schematics" "Ctrl Shift<Key>w" "toglOnlyWireLblSel()")
 load "/home/USERNAME/SKILL/utils/HEDoffTopCellGlobalBindings.il"
 hiSetBindKey("Cadence Hierarchy Editor" "Ctrl <Key>1" "HEDoffTopCellGlobalBindings()" )
 hiSetBindKey("Schematics" "Ctrl <Key>1" "HEDoffTopCellGlobalBindings()" )
+
+load "/home/USERNAME/SKILL/utils/smartIncPinSpace.il"
+hiSetBindKey("Schematics" "Ctrl Shift<Key>]" "smartIncPinSpace(\"+\")") ; 5/30/21
+hiSetBindKey("Schematics" "Ctrl Shift<Key>[" "smartIncPinSpace(\"-\")") ; 5/30/21
