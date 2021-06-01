@@ -8,8 +8,22 @@ procedure(CCSLibManSelectInst()
 	   if(inst~>objType == "inst" then
 	       ddsSetLibManLCV(inst~>libName inst~>cellName inst~>viewName)
 	       else
-			   printf(" No instance selected \n")
-	   );if
+	    	 libCell = note_lib_cell(  )
+			 if( libCell 
+			 then
+				libCell = parseString( libCell " " )
+				while( 1 < length( libCell )
+					if( ddGetObj( car( libCell) cadr( libCell ) )
+					then
+						ddsSetLibManLCV( car(libCell) cadr(libCell) )
+					)
+					libCell = cddr( libCell )
+					
+				) ; while 1 <				
+			 else
+			   printf(" No instance or text selected \n")
+			 ) ; if libCell
+	   )
 	else
 		cv = geGetWindowCellView()
 		ddsSetLibManLCV(cv~>libName cv~>cellName cv~>viewName)	; hit on 9/27 - do this anyways.. :)
