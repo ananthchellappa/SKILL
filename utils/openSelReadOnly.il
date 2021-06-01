@@ -22,7 +22,7 @@ procedure( openSelReadOnly()
     			while( 1 < length( libCell )
     				if( ddGetObj( car( libCell) cadr( libCell ) )
     				then
-    				   geOpen(?lib car(libCell) ?cell cadr(libCell) ?View "schematic" ?ViewType "schematic" ?mode "r")
+    				   geOpen(?lib car(libCell) ?cell cadr(libCell) ?view "schematic" ?viewType "schematic" ?mode "r")
     				)
     				libCell = Cddr( libCell )
 
