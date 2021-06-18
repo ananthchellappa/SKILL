@@ -10,6 +10,21 @@ procedure(MYappendSignal()
 
 )
 
+procedure(MYappendTranDiff()
+
+ let((session)
+
+  session=sevSession(hiGetCurrentWindow())
+  eval(sevWindow(session)->hiForm)->artistPlottingMode->value="Append"  ; this sets the plotting mode on the ADE window
+  sevDirectPlot(session 'asiiPlotTranSubtractCB)
+
+ )
+
+)
+
+
+
+
 ; Abhay Apte
 
 procedure(plotbus()
