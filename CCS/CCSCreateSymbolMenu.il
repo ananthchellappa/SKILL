@@ -13,6 +13,7 @@ hiCreateMenuItem( ?name 'l_ac_rnd_2_line ?itemText "Round Pins 2 Lines" ?callbac
 hiCreateMenuItem( ?name 'l_ac_sq_2_line ?itemText "Square Pins 2 Lines" ?callback "squarePinsToLine()" )
 hiCreateMenuItem( ?name 'l_ac_arrows ?itemText "Add Arrows for Counter-Intuitive Pins" ?callback "arrows()" )
 hiCreateMenuItem( ?name 'l_brwse_fl_nodes ?itemText "Browse Floating Nodes" ?callback "fl_nodes_start()" )
+hiCreateMenuItem( ?name 'l_list_pins ?itemText "List Pins" ?callback "list_pins()" )
 )
 )
 )
