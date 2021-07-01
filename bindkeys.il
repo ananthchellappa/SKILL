@@ -404,7 +404,8 @@ load("/home/USERNAME/SKILL/utils/getWinNum.il")
 
 ; 11/29/16 after Bhupendra Kumar helped out..
 load "/home/USERNAME/SKILL/utils/selectInTableView.il"
-hiSetBindKey( "Schematics" "Ctrl <Key>i" "selectInTableView()" )
+hiSetBindKey( "Schematics" "Ctrl <Key>i" "heHiEditConfig() selectInTableView()" )
+
 
 ; 1/26/17
 load "/home/USERNAME/SKILL/utils/listInstPaths.il"
