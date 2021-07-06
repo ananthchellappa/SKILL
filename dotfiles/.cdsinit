@@ -119,4 +119,7 @@ hiSetBindKey("Schematics" "Ctrl Shift<Key>t" "toggleBindkeys()")
 hiSetBindKey("Command Interpreter" "Ctrl Shift<Key>t" "toggleBindkeys()")
 
 
+; from Jayant on 46541767 - ViVA asking for confirmation in response to CTRL-E to del all markers
+envSetVal("viva.application" "confirmCloseWindow" 'string "false")
+
 
