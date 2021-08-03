@@ -1,9 +1,9 @@
 ; was out of touch with SKILL when I did this
 ; had forgotten about xCoord and yCoord
-; load "/home/USERNAME/SKILL/arrows.il"
+; load "/home/ananthc/SKILL/utils/arrows.il"
 
 procedure( arrows(  )
-    let( (cv win pllx purx lllx lurx line xL yL )
+    let( (cv win pllx purx lllx lurx line xL yL fig )
         cv = geGetWindowCellView()
 		win = hiGetCurrentWindow()
 printf("Processing %s\n", cv~>cellName)
@@ -11,10 +11,19 @@ printf("Processing %s\n", cv~>cellName)
         then
 			hiGetCurrentWindow()~>fullSelectionMode="enclosedAndCrossed"
             foreach( pin cv~>terminals
+				schDeselectAllFig()
 				if( "output" ==  pin~>direction
 					then
 						purx = caadar( pin~>pins~>fig~>bBox )
-						lllx = caaaar( pin~>pins~>fig~>children~>bBox )
+						foreach( fig car( pin~>pins~>fig~>children )
+							if( fig~>labelType == "normalLabel"
+							then
+								lllx = xCoord( car(fig~>bBox ) )
+							)
+						)
+						;lllx = caaaar( pin~>pins~>fig~>children~>bBox )
+						; old (this picks up the cdsTerm :(
+						
 						if( purx < lllx
 							then 
 								printf("Hitting output pin : %s\n", pin~>name )
@@ -43,7 +52,13 @@ printf("Processing %s\n", cv~>cellName)
 				if( "input" ==  pin~>direction
 					then		; you just have to suffer by experimenting with a geGetSelSet and figure it out :(
 						pllx = caaar( pin~>pins~>fig~>bBox )
-						lurx = car( cadaar( pin~>pins~>fig~>children~>bBox ) )
+						foreach( fig car( pin~>pins~>fig~>children )
+							if( fig~>labelType == "normalLabel"
+							then
+								lurx = xCoord( cadr(fig~>bBox ) )
+							)
+						)
+						;lurx = car( cadaar( pin~>pins~>fig~>children~>bBox ) )
 						if( pllx > lurx
 							then 
 								printf("Hitting input pin : %s\n", pin~>name )
