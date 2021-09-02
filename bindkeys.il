@@ -591,3 +591,8 @@ hiSetBindKey("Schematics" "Ctrl Shift<Key>]" "smartIncPinSpace(\"+\")") ; 5/30/2
 hiSetBindKey("Schematics" "Ctrl Shift<Key>[" "smartIncPinSpace(\"-\")") ; 5/30/21
 
 hiSetBindKey( "vivaGraph" "Ctrl Shift<Key>d" "awvDeleteSubwindow( awvGetCurrentWindow() )")
+
+; 9/2/21
+load "/home/USERNAME/SKILL/utils/delDashEllipse.il"
+hiSetBindKey( "Schematics" "Ctrl Shift<Key>e" "delDashEllipse() )")
+
