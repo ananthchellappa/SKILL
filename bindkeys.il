@@ -596,3 +596,6 @@ hiSetBindKey( "vivaGraph" "Ctrl Shift<Key>d" "awvDeleteSubwindow( awvGetCurrentW
 load "/home/USERNAME/SKILL/utils/delDashEllipse.il"
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>d" "delDashEllipse() ")
 
+; 9/29/21
+hiSetBindKey( "Schematics" "Ctrl Alt Shift<Key>r" "sevRunEngine( sevSession(hiGetCurrentWindow() ) )")
+
