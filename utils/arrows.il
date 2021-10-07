@@ -25,28 +25,31 @@ printf("Processing %s\n", cv~>cellName)
 						; old (this picks up the cdsTerm :(
 						
 						if( purx < lllx
-							then 
-								printf("Hitting output pin : %s\n", pin~>name )
-								; car( cdadar --> pury
-								; cadaar --> plly
-								geSelectArea( win list( 
-									list( (3*purx + lllx)/4.0 car(cdadar( pin~>pins~>fig~>bBox ) )
-										)
-									list( (purx + lllx)/2.0 cadaar(pin~>pins~>fig~>bBox ) ) 
-										)
-									"rectangle" )
-								line = car(setof( obj geGetSelSet() objType=="line") )
+						then
+							printf("Hitting output pin : %s\n", pin~>name )
+							; car( cdadar --> pury
+							; cadaar --> plly
+							geSelectArea( win list(
+								list( (3*purx + lllx)/4.0 car(cdadar( pin~>pins~>fig~>bBox ) )
+									)
+								list( (purx + lllx)/2.0 cadaar(pin~>pins~>fig~>bBox ) )
+									)
+								"rectangle" )
+							line = car(setof( obj geGetSelSet() objType=="line") )
+							if( line
+							then
 								yL = yCoord(car(line~>bBox))
-								if( yL == yCoord(cadr( line~>bBox) ) 
+								if( yL == yCoord(cadr( line~>bBox) )
 									  ; lly = ury => horizontal
 									then
 										xL = xCoord(car(line~>bBox))
-										dbCreateLine( cv list( 231 "drawing") 
+										dbCreateLine( cv list( 231 "drawing")
 											list( xL+0.25:yL xL+0.0625:yL xL+0.125:yL+0.0625
 												  xL:yL xL+0.125:yL-0.0625 xL+0.0625:yL )
 										)
 										dbDeleteObject( line )
 								)
+							) ; if line
 						)
 				) ; if
 				if( "input" ==  pin~>direction
@@ -60,26 +63,29 @@ printf("Processing %s\n", cv~>cellName)
 						)
 						;lurx = car( cadaar( pin~>pins~>fig~>children~>bBox ) )
 						if( pllx > lurx
-							then 
-								printf("Hitting input pin : %s\n", pin~>name )
- 								geSelectArea( win list(
- 									list( (3*pllx + lurx)/4.0 car(cdadar( pin~>pins~>fig~>bBox ) )
- 										)
- 									list( (pllx + lurx)/2.0 cadaar(pin~>pins~>fig~>bBox ) )
- 										)
- 									"rectangle" )
-								line = car(setof( obj geGetSelSet() objType=="line") )
+						then
+							printf("Hitting input pin : %s\n", pin~>name )
+ 							geSelectArea( win list(
+ 								list( (3*pllx + lurx)/4.0 car(cdadar( pin~>pins~>fig~>bBox ) )
+ 									)
+ 								list( (pllx + lurx)/2.0 cadaar(pin~>pins~>fig~>bBox ) )
+ 									)
+ 								"rectangle" )
+							line = car(setof( obj geGetSelSet() objType=="line") )
+							if( line
+							then
 								yL = yCoord(car(line~>bBox))
-								if( yL == yCoord(cadr( line~>bBox) ) 
+								if( yL == yCoord(cadr( line~>bBox) )
 									  ; lly = ury => horizontal
 									then
 										xL = xCoord(car(line~>bBox))
-										dbCreateLine( cv list( 231 "drawing") 
+										dbCreateLine( cv list( 231 "drawing")
 											list( xL+0.25:yL xL+0.0625:yL xL+0.125:yL+0.0625
 												  xL:yL xL+0.125:yL-0.0625 xL+0.0625:yL )
 										)
 										dbDeleteObject( line )
 								)
+							) ; if line
  						)
 				) ; if
             ) ; foreach
