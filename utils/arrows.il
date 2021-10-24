@@ -1,4 +1,4 @@
-; was out of touch with SKILL when I did this
+ ; was out of touch with skill when i did this
 ; had forgotten about xCoord and yCoord
 ; load "/home/ananthc/SKILL/utils/arrows.il"
 
@@ -22,11 +22,11 @@ printf("Processing %s\n", cv~>cellName)
 							)
 						)
 						;lllx = caaaar( pin~>pins~>fig~>children~>bBox )
-						; old (this picks up the cdsTerm :(
+						; old (this picks up the cdsterm :(
 						
 						if( purx < lllx
 						then
-							printf("Hitting output pin : %s\n", pin~>name )
+							printf("hitting output pin : %s\n", pin~>name )
 							; car( cdadar --> pury
 							; cadaar --> plly
 							geSelectArea( win list(
@@ -35,7 +35,7 @@ printf("Processing %s\n", cv~>cellName)
 								list( (purx + lllx)/2.0 cadaar(pin~>pins~>fig~>bBox ) )
 									)
 								"rectangle" )
-							line = car(setof( obj geGetSelSet() objType=="line") )
+							line = car( setof( obj geGetSelSet() obj~>objType == "line" ) )
 							if( line
 							then
 								yL = yCoord(car(line~>bBox))
@@ -64,14 +64,14 @@ printf("Processing %s\n", cv~>cellName)
 						;lurx = car( cadaar( pin~>pins~>fig~>children~>bBox ) )
 						if( pllx > lurx
 						then
-							printf("Hitting input pin : %s\n", pin~>name )
+							printf("hitting input pin : %s\n", pin~>name )
  							geSelectArea( win list(
  								list( (3*pllx + lurx)/4.0 car(cdadar( pin~>pins~>fig~>bBox ) )
  									)
  								list( (pllx + lurx)/2.0 cadaar(pin~>pins~>fig~>bBox ) )
  									)
  								"rectangle" )
-							line = car(setof( obj geGetSelSet() objType=="line") )
+							line = car( setof( obj geGetSelSet() obj~>objType == "line" ) )
 							if( line
 							then
 								yL = yCoord(car(line~>bBox))
@@ -91,7 +91,7 @@ printf("Processing %s\n", cv~>cellName)
             ) ; foreach
             t
         else
-            println("Sorry, exiting due to read-only mode")
+            println("sorry, exiting due to read-only mode")
             nil
     )   ; if
 
