@@ -7,7 +7,7 @@ procedure( note_lib_cell()
 			txt = rexReplace( selObj~>theLabel " " 0 )
 			rexCompile( "[(i!)]" )
 			txt = rexReplace( txt "" 0 )
-			cid = ipcBeginProcess( strcat( "echo " txt " | perl -n ~achellap/perl/extr_lib_cell.pl" ) )
+			cid = ipcBeginProcess( strcat( "echo " txt " | perl -n ~/SKILL/perl/extr_lib_cell.pl" ) )
             ipcWait(cid)
 			txt = ipcReadProcess( cid 30)
 
