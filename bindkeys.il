@@ -599,3 +599,5 @@ hiSetBindKey( "Schematics" "Ctrl Shift<Key>d" "delDashEllipse() ")
 ; 9/29/21
 hiSetBindKey( "Schematics" "Ctrl Alt Shift<Key>r" "sevRunEngine( sevSession(hiGetCurrentWindow() ) )")
 
+load "~/SKILL/utils/toggleCase.il"
+hiSetBindKey( "Schematics" "Ctrl Alt<Key>c" "toggleCase()" )
