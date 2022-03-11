@@ -110,7 +110,7 @@ then
 println("Now saving default bindkeys")
 
 loadi("/home/USERNAME/SKILL/CCS/CCSexportAllBindKeys.il")
-loadi("/home/USERNAME/SKILL/toggleBindkeys.il" )
+loadi("/home/USERNAME/SKILL/utils/toggleBindkeys.il" )
 logpath = getShellEnvVar("CDS_LOG_PATH")
 CCSexportAllBindKeys( buildString( list(logpath "std_bks.il" ) "/" ) )
 loadi("/home/USERNAME/SKILL/bindkeys.il") 	; 12/28/18 moved to end
