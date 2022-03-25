@@ -5,7 +5,7 @@ procedure( note_lib_cell()
 		then
 			rexCompile( "\n" )
 			txt = rexReplace( selObj~>theLabel " " 0 )
-			rexCompile( "[(i!)]" )
+			rexCompile( "[('!)]" )
 			txt = rexReplace( txt "" 0 )
 			cid = ipcBeginProcess( strcat( "echo " txt " | perl -n ~/SKILL/perl/extr_lib_cell.pl" ) )
             ipcWait(cid)
