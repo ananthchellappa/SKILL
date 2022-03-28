@@ -601,3 +601,6 @@ hiSetBindKey( "Schematics" "Ctrl Alt Shift<Key>r" "sevRunEngine( sevSession(hiGe
 
 load "~/SKILL/utils/toggleCase.il"
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>c" "toggleCase()" )
+
+; 3/28/22 after Lalit tells me they did modify to ignore the don't-confirm setting between ISR16 and 23
+hiSetBindKey("vivaGraph" "<Key>e" "_ddtExecuteAction(awvGetCurrentWindow()->vivaSession \"deleteObjects\") ")
