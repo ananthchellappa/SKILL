@@ -1,5 +1,5 @@
 procedure( selectInTableView()
-
+	heHiEditConfig()
 	let( (inst cv nwin cmd combo);local variables
 
 		unless(and(cv = geGetEditRep() cv~>cellViewType== "schematic") error("Current design window is not schematic"))
