@@ -604,3 +604,7 @@ hiSetBindKey( "Schematics" "Ctrl Alt<Key>c" "toggleCase()" )
 
 ; 3/28/22 after Lalit tells me they did modify to ignore the don't-confirm setting between ISR16 and 23
 hiSetBindKey("vivaGraph" "<Key>e" "_ddtExecuteAction(awvGetCurrentWindow()->vivaSession \"deleteObjects\") ")
+
+; 4/12/22 toggle net highlighting
+load "~/SKILL/utils/togl_net_hilite.il"
+hiSetBindKey( "Schematics" "Ctrl Alt Shift<Key>d" "togl_net_hilite()" )
