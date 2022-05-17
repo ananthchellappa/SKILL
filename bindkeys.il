@@ -608,3 +608,12 @@ hiSetBindKey("vivaGraph" "<Key>e" "_ddtExecuteAction(awvGetCurrentWindow()->viva
 ; 4/12/22 toggle net highlighting
 load "~/SKILL/utils/togl_net_hilite.il"
 hiSetBindKey( "Schematics" "Ctrl Alt Shift<Key>d" "togl_net_hilite()" )
+
+; 5/16/22  was geHiDeleteMarker()
+hiSetBindKey("Schematics" "Ctrl <Key>g" "{ MYLIB=schCreateInstForm->libraryName->value \
+MYCELL=schCreateInstForm->cellName->value MYVIEW=schCreateInstForm->viewName->value \
+schHiCreateInst(\"analogLib\" \"gnd\" \"symbol\") }")
+
+hiSetBindKey("Schematics" "Ctrl <Key>v" "{ MYLIB=schCreateInstForm->libraryName->value \
+MYCELL=schCreateInstForm->cellName->value MYVIEW=schCreateInstForm->viewName->value \
+schHiCreateInst(\"analogLib\" \"vdc\" \"symbol\") }")
