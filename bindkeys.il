@@ -617,3 +617,6 @@ schHiCreateInst(\"analogLib\" \"gnd\" \"symbol\") }")
 hiSetBindKey("Schematics" "Ctrl <Key>v" "{ MYLIB=schCreateInstForm->libraryName->value \
 MYCELL=schCreateInstForm->cellName->value MYVIEW=schCreateInstForm->viewName->value \
 schHiCreateInst(\"analogLib\" \"vdc\" \"symbol\") }")
+
+load "~/SKILL/utils/cpLibCell2Clipboard.il")
+hiSetBindKey( "Schematics" "Alt Shift<Key>c" "cpLibCell2Clipboard()" )
