@@ -5,7 +5,7 @@ procedure(libManSelectTB()
 ; intended to take the user to the test-bench in PROJ_TB when the current library is PROJ_SOMETHING
 
    let((inst cv lib cell tbLib tbCell );local variables
-
+	ddsOpenLibManager() 
 	if( 0 < length( geGetSelSet() ) 	; nothing selected? Then use the cellName of the viewed Schematic
 	then
 	   inst=car(geGetSelSet())
