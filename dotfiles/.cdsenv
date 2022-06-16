@@ -60,3 +60,8 @@ ui      raiseCIWonWarning       boolean t
 
 ; from M Nix
 schematic   srcPinNetCollision           cyclic    "warning"
+
+; from Shyam Kumar Gupta on 46622885 : how to ensure "include as bundle" checkbox on Select Bits from Bus for is UNchecked by default when launched?
+;envSetVal("auCore.selection" "includeAsBundle" 'boolean nil)
+auCore.selection includeAsBundle boolean nil
+
