@@ -61,3 +61,17 @@ procedure( MYdescend( w_query )
 	) ; let
 )
 
+procedure( desc_new_tab( tab_opt )
+; tab_opt 1 for new tab, 0 for new window
+	let( (rv)
+		rv = envGetVal("schematic" "descendCanvasType" 'string)
+		if( 1 == tab_opt
+		then
+			envSetVal("schematic" "descendCanvasType" 'string "new tab")
+		else
+			envSetVal("schematic" "descendCanvasType" 'string "new window")
+		)
+		MYdescend(0)
+		envSetVal("schematic" "descendCanvasType" 'string rv)
+	)
+)
