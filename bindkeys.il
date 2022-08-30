@@ -431,7 +431,7 @@ load "/home/USERNAME/SKILL/utils/fixPartName.il"
 hiSetBindKey( "Symbol" "Ctrl Alt<Key>C" "fixPartName()" )
 
 ; 4/3/17
-load "/home/USERNAME/SKILL/utils/openSelReadOnly.il"
+load "/home/USERNAME/SKILL/utils/openSelReadOnly.il" ; ctrl shift <key>n
 
 ; 5/18/17
 hiSetBindKey("Schematics" "Alt Shift<Key>h" "heHiEditConfig()")
