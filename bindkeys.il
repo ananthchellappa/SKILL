@@ -618,5 +618,9 @@ hiSetBindKey("Schematics" "Ctrl <Key>v" "{ MYLIB=schCreateInstForm->libraryName-
 MYCELL=schCreateInstForm->cellName->value MYVIEW=schCreateInstForm->viewName->value \
 schHiCreateInst(\"analogLib\" \"vdc\" \"symbol\") }")
 
-load "~/SKILL/utils/cpLibCell2Clipboard.il")
+load "~/SKILL/utils/cpLibCell2Clipboard.il"
 hiSetBindKey( "Schematics" "Alt Shift<Key>c" "cpLibCell2Clipboard()" )
+
+; 8/30/22 
+hiSetBindKey( "Schematics" "Ctrl Alt<Key>x" "desc_new_tab(0)" ) ; new window
+hiSetBindKey( "Schematics" "Ctrl Shift<Key>t" "desc_new_tab(1)" ) ; new tab
