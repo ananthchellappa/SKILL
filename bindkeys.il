@@ -624,3 +624,6 @@ hiSetBindKey( "Schematics" "Alt Shift<Key>c" "cpLibCell2Clipboard()" )
 ; 8/30/22 
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>x" "desc_new_tab(0)" ) ; new window
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>t" "desc_new_tab(1)" ) ; new tab
+
+; 9/21/22
+hiSetBindKey( "Layout" "Ctrl <Key>h" "_leRotateOrFlip(\"MY\")" ) ; flip horizontal
