@@ -28,7 +28,7 @@ procedure( zoomNetVA(CLIPDATA)
         println("Here's the text : ")
         println(CLIPDATA)
 
-        nodePath = parseString(CLIPDATA ".")
+        nodePath = parseString(CLIPDATA "./\n")
         node = car(reverse(nodePath))
         instList = reverse(cdr(reverse(nodePath)))
         hierDescend( instList )
