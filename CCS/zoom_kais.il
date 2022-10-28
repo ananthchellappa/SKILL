@@ -16,7 +16,7 @@ procedure( zoomNetVA(CLIPDATA @optional (zoom 't) )
 		println(CLIPDATA)
 		schDeselectAllFig()
 
-        nodePath = parseString(CLIPDATA ".")
+        nodePath = parseString(CLIPDATA "./\n")
         node = car(reverse(nodePath))
         instList = reverse(cdr(reverse(nodePath)))
 		
