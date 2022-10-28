@@ -627,3 +627,9 @@ hiSetBindKey( "Schematics" "Ctrl Shift<Key>t" "desc_new_tab(1)" ) ; new tab
 
 ; 9/21/22
 hiSetBindKey( "Layout" "Ctrl <Key>h" "_leRotateOrFlip(\"MY\")" ) ; flip horizontal
+
+; 10/28/22
+load "~/SKILL/utils/suffix.il"
+hiSetBindKey( "Schematics" "Ctrl Alt<Key>e" "rmvSuffix()" ) ; remove suffix
+hiSetBindKey( "Schematics" "Ctrl Alt<Key>f" "putSuffix()" ) ; put suffix
+hiSetBindKey( "Schematics" "Ctrl Alt<Key>g" "getSuffix()" ) ; get suffix --> SUFFIX variable
