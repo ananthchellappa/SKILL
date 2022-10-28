@@ -17,7 +17,7 @@ procedure( zoomNet()
 
         println("Hier's the text : ")
         println(text)
-        nodePath = parseString(text ".")
+        nodePath = parseString(text "./\n")
         node = car(reverse(nodePath))
         instList = reverse(cdr(reverse(nodePath)))
         hierDescend( instList )
