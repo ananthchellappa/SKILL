@@ -14,7 +14,7 @@ procedure( zoomInst(CLIPDATA)
 ; ; ; from look at the IPC SKILL reference
 ; ;         text = ipcReadProcess(cid 1)
 ; ;         println(text)
-        instPath = parseString(CLIPDATA ".")    ; typically what sim output is..
+        instPath = parseString(CLIPDATA "./\n")    ; typically what sim output is..
         inst = car(reverse(instPath))
         instList = reverse(cdr(reverse(instPath)))
         hierDescend( instList )
