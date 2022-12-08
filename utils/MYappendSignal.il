@@ -5,9 +5,7 @@ procedure(MYappendSignal()
   session=sevSession(hiGetCurrentWindow())
   eval(sevWindow(session)->hiForm)->artistPlottingMode->value="Append"  ; this sets the plotting mode on the ADE window
   sevDirectPlot(session 'asiiPlotTranSignalCB)
-
  )
-
 )
 
 procedure(MYappendTranDiff()
@@ -17,13 +15,28 @@ procedure(MYappendTranDiff()
   session=sevSession(hiGetCurrentWindow())
   eval(sevWindow(session)->hiForm)->artistPlottingMode->value="Append"  ; this sets the plotting mode on the ADE window
   sevDirectPlot(session 'asiiPlotTranSubtractCB)
-
  )
-
 )
 
+; NOTE, these will work properly (i.e., not overwrite ViVA) only if plotting mode 
+; has been set to Append using : envSetVal("asimenv.plotting" "artistPlottingMode" 'string "Append")
+procedure(explAppendSignal()
 
+ let((session)
 
+  session=sevSession(hiGetCurrentWindow())
+  sevDirectPlot(session 'asiiPlotTranSignalCB)
+ )
+)
+
+procedure(explAppendTranDiff()
+
+ let((session)
+
+  session=sevSession(hiGetCurrentWindow())
+  sevDirectPlot(session 'asiiPlotTranSubtractCB)
+ )
+)
 
 ; Abhay Apte
 
