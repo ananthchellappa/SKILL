@@ -122,4 +122,16 @@ hiSetBindKey("Command Interpreter" "Ctrl Shift<Key>t" "toggleBindkeys()")
 ; from Jayant on 46541767 - ViVA asking for confirmation in response to CTRL-E to del all markers
 envSetVal("viva.application" "confirmCloseWindow" 'string "false")
 
+envSetVal("maestro.explorer" "onHistoryNameCollision" 'cyclic "IncrementAsNew")
+envSetVal("schematic" "ssgSortPins" 'cyclic "geometric")
+
+; from Karan Kumar 46625849 Assembler takes 10 min to open
+envSetVal("adexl.gui" "disableConstraintsRead" 'boolean t)
+envSetVal("auCore.misc" "findVariablesSkip" 'cyclic "extracted")
+
+envSetVal("adexl.gui" "openSchInWin" 'boolean t)
+
+; Shreyansh Dixit :
+envSetVal("asimenv.plotting" "artistPlottingMode" 'string "Append")
+
 
