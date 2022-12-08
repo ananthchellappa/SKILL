@@ -2,41 +2,43 @@ toggler=0
 sch_grid_togl=0
 tb_toggle=0
 load_all_bindkeys=t ; if you are someone else, then change this :)
+simCellTbl = makeTable( "" nil )
 
-load("/home/USERNAME/SKILL/utils/toglInstObjFil.il")
-load("/home/USERNAME/SKILL/CCS/CCSToggleSelectMode.il")
-load("/home/USERNAME/SKILL/CCS/CCSsuppressDispForm.il")
-load("/home/USERNAME/SKILL/utils/killPinAnnotate.il")
-;load("/home/USERNAME/SKILL/utils/toolbarToggle.il") ; 7/12/18
-load("/home/USERNAME/SKILL/CCS/LSW.il")
-load("/home/USERNAME/SKILL/utils/sch_grid_togl.il")
-load("/home/USERNAME/SKILL/CCS/CCSchangeWireWidth.il")
-load("/home/USERNAME/SKILL/CCS/CCSExportOutputs.il")
-load("/home/USERNAME/SKILL/utils/vivaGridToggle.il")
-load("/home/USERNAME/SKILL/CCS/CCSrectSelect.il")
-load("/home/USERNAME/SKILL/CCS/CCSOffCdsTermNetNames.il")
-load("/home/USERNAME/SKILL/CCS/CCSSnapToGrid.il") ; Sameer
-; load("/home/USERNAME/SKILL/CCS/CSComposerGridSnap.il")
-load("/home/USERNAME/SKILL/utils/hiSelectSymPins.il")
-load("/home/USERNAME/SKILL/utils/updatePinLabels.il")
-load("/home/USERNAME/SKILL/utils/MYappendSignal.il")
-load("/home/USERNAME/SKILL/utils/MYappendAllSignal.il")
-load("/home/USERNAME/SKILL/utils/updateSnapSpacing.il")
 
-load("/home/USERNAME/SKILL/utils/CCSDescend.il")
+load("~ac104265/SKILL/utils/toglInstObjFil.il")
+load("~ac104265/SKILL/CCS/CCSToggleSelectMode.il")
+load("~ac104265/SKILL/CCS/CCSsuppressDispForm.il")
+load("~ac104265/SKILL/utils/killPinAnnotate.il")
+;load("~ac104265/SKILL/utils/toolbarToggle.il") ; 7/12/18
+load("~ac104265/SKILL/CCS/LSW.il")
+load("~ac104265/SKILL/utils/sch_grid_togl.il")
+load("~ac104265/SKILL/CCS/CCSchangeWireWidth.il")
+load("~ac104265/SKILL/CCS/CCSExportOutputs.il")
+load("~ac104265/SKILL/utils/vivaGridToggle.il")
+load("~ac104265/SKILL/CCS/CCSrectSelect.il")
+load("~ac104265/SKILL/CCS/CCSOffCdsTermNetNames.il")
+load("~ac104265/SKILL/CCS/CCSSnapToGrid.il") ; Sameer
+; load("~ac104265/SKILL/CCS/CSComposerGridSnap.il")
+load("~ac104265/SKILL/utils/hiSelectSymPins.il")
+load("~ac104265/SKILL/utils/updatePinLabels.il")
+load("~ac104265/SKILL/utils/MYappendSignal.il")
+load("~ac104265/SKILL/utils/MYappendAllSignal.il")
+load("~ac104265/SKILL/utils/updateSnapSpacing.il")
+
+load("~ac104265/SKILL/utils/CCSDescend.il")
 ; 6/27/18
-load("/home/USERNAME/SKILL/utils/newDescend.il")
+load("~ac104265/SKILL/utils/newDescend.il")
 
-load("/home/USERNAME/SKILL/utils/CCSkey.il")
-load("/home/USERNAME/SKILL/utils/CCSrestoreDefaultWireColors.il")
-load("/home/USERNAME/SKILL/utils/awvGrid.il")
-load("/home/USERNAME/SKILL/utils/applify.il")
-; load("/home/USERNAME/SKILL/utils/sch_print_L.il")
-load("/home/USERNAME/SKILL/utils/MYappendDCSignal.il")
-load("/home/USERNAME/SKILL/utils/MYdescend.il")
-load("/home/USERNAME/SKILL/utils/hiReturn.il")
+load("~ac104265/SKILL/utils/CCSkey.il")
+load("~ac104265/SKILL/utils/CCSrestoreDefaultWireColors.il")
+load("~ac104265/SKILL/utils/awvGrid.il")
+load("~ac104265/SKILL/utils/applify.il")
+; load("~ac104265/SKILL/utils/sch_print_L.il")
+load("~ac104265/SKILL/utils/MYappendDCSignal.il")
+load("~ac104265/SKILL/utils/MYdescend.il")
+load("~ac104265/SKILL/utils/hiReturn.il")
 
-load("/home/USERNAME/SKILL/CCS/CCSMarkerForm.il")
+load("~ac104265/SKILL/CCS/CCSMarkerForm.il")
 
 ; 11/16/16
 hiSetBindKey("Schematics" "Ctrl<Key>7" "MYappendDCSignal()")
@@ -61,20 +63,20 @@ hiSetBindKey("Layout" "Alt <Key>a" "pteSetVisible(\"PACT drawing\" !pteIsVisible
 
 
 ; 7/5/16 Likesh Sahoo
-load("/home/USERNAME/SKILL/CCS/CCSLibManSelectInst.il")
+load("~ac104265/SKILL/CCS/CCSLibManSelectInst.il")
 ; contains Ctrl Alt<key>s
 
-; load("/home/USERNAME/SKILL/CCS/CheckNetSet.il")
-load("/home/USERNAME/SKILL/utils/schIncreasePinSpacing.il")
+; load("~ac104265/SKILL/CCS/CheckNetSet.il")
+load("~ac104265/SKILL/utils/schIncreasePinSpacing.il")
 
 
 ; 4/22/2014 atl v chelsea : grid
 hiSetBindKey("Schematics" "Ctrl<Key>F10" "sch_grid_togl()")
 
-; load("/home/USERNAME/SKILL/utils/addVDDVSS.il")
-; load("/home/USERNAME/SKILL/utils/getVDDVSS.il")
-; load("/home/USERNAME/SKILL/utils/addVCC.il")
-; load("/home/USERNAME/SKILL/utils/delVDD.il")
+; load("~ac104265/SKILL/utils/addVDDVSS.il")
+; load("~ac104265/SKILL/utils/getVDDVSS.il")
+; load("~ac104265/SKILL/utils/addVCC.il")
+; load("~ac104265/SKILL/utils/delVDD.il")
 ; lastVDD="VDD"
 ; lastVSS="VSS"
 ; hiSetBindKey("Schematics" "Ctrl Shift<Key>v" "addVDDVSS()")
@@ -118,11 +120,11 @@ hiSetBindKey("Schematics" "Alt<Key>z" "CCSrectSelect()")    ; ankush gupta
 ; hiSetBindKey("Schematics" "Alt<Key>q" "CCSOffCdsTermNetNames()")    ; sameer
 ; using F10.. set by the code itself..
 
-; ; load("/home/USERNAME/SKILL/utils/MYdescend.il") 6/22/2011
+; ; load("~ac104265/SKILL/utils/MYdescend.il") 6/22/2011
 
 ; rendered obsolte by Vikas Agarwal
 ; hiSetBindKey("Schematics" "Alt<Key>h" "zoomNet()")
-; load("/home/USERNAME/SKILL/utils/zoomNet.il")
+; load("~ac104265/SKILL/utils/zoomNet.il")
 
 ; one that Dan Pickens brushed off :
 
@@ -139,9 +141,9 @@ hiSetBindKey("Schematics" "Shift<Btn4Down>"
 
 
 ; for Vikas
-load("/home/USERNAME/SKILL/CCS/zoom_kais.il")
+load("~ac104265/SKILL/CCS/zoom_kais.il")
 ; 1/31/2013 - moved zoomInst here after glitch today.. need CCSclip
-load("/home/USERNAME/SKILL/utils/zoomInst.il")
+load("~ac104265/SKILL/utils/zoomInst.il")
 
 
 ; 8/23/2013
@@ -184,7 +186,7 @@ hiSetBindKey("Schematics" "Alt<Btn5Down>" "inc_wire_inst(0.8)")
 hiSetBindKey("Schematics" "Ctrl<Key>r" "schHiReplace()")
 hiSetBindKey("Symbol" "Ctrl<Key>r" "schHiReplace()")
 
-; hiSetBindKey("Schematics" "<Key>1" "load(\"/home/USERNAME/SKILL/utils/op_info.il\")")
+; hiSetBindKey("Schematics" "<Key>1" "load(\"~ac104265/SKILL/utils/op_info.il\")")
 ; what served me so well for so long:)
 hiSetBindKey("Schematics" "<Key>1" "sevPrintResults(sevSession(hiGetCurrentWindow()) 'dcOpPoints)")
 hiSetBindKey("Schematics" "<Key>2" "CCSkey() awviPUpdateMenuCB()")
@@ -203,9 +205,9 @@ hiSetBindKey("Schematics" "Alt<Key>7" "_vivaStartSelectSignalMode( \"IS\" )")
 
 ; hiSetBindKey("Schematics" "Ctrl<Key>4" "_amsaDirectPlot( sevSession(hiGetCurrentWindow()) 'asiiPlotTranSignalCB)")
 ; after de post aus Andrew Beckett
-; ; hiSetBindKey("Schematics" "Ctrl<Key>4" "load(\"/home/USERNAME/SKILL/utils/direct_plot.il\")")
+; ; hiSetBindKey("Schematics" "Ctrl<Key>4" "load(\"~ac104265/SKILL/utils/direct_plot.il\")")
 hiSetBindKey("Schematics" "Ctrl<Key>4" "MYappendSignal()")
-hiSetBindKey("Schematics" "Shift<Key>4" "MYappendAllSignal()")
+hiSetBindKey("Schematics" "Shift<Key>4" "explAppendSignal()")	; 12/8/22
 
 ; Checking for ver 6
 if( rexMatchp( "IC6" cadr(parseString(getVersion(t))) )
@@ -224,7 +226,7 @@ hiSetBindKey("Symbol" "Shift<Key>Up" "geGetSelSet()~>height = car(geGetSelSet()~
 hiSetBindKey("Symbol" "Shift<Key>Down" "geGetSelSet()~>height = car(geGetSelSet()~>height)*0.8")
 ) ; if
 
-; hiSetBindKey("Schematics" "<Key>6" "load(\"/home/USERNAME/SKILL/utils/annotOp.il\")")
+; hiSetBindKey("Schematics" "<Key>6" "load(\"~ac104265/SKILL/utils/annotOp.il\")")
 hiSetBindKey("Schematics" "<Key>6" "sevAnnotateResults(sevSession(hiGetCurrentWindow()) 'dcOpPoints)")
 hiSetBindKey("Schematics" "Alt<Key>6" "sevAnnotateResults(sevSession(hiGetCurrentWindow()) 'dcNodeVoltages)")
 ; may 7 2014 after using isr6 for the first time 
@@ -241,8 +243,8 @@ hiSetBindKey("Layout" "<Key>8" "leHiUnmarkNet()")
 hiSetBindKey("Layout" "Alt<Key>x" "lxHiProbe()")
 hiSetBindKey("Schematics" "Ctrl<Key>w" "hiCloseWindow(getCurrentWindow())")
 hiSetBindKey("Schematics" "Alt<Key>w" "sevOpenPlotWindow(sevSession(getCurrentWindow()))" )
-hiSetBindKey("Schematics" "Alt<Key>b" "load(\"/home/USERNAME/SKILL/utils/sch_print.il\")")
-hiSetBindKey("Schematics" "Ctrl<Key>b" "load(\"/home/USERNAME/SKILL/utils/sch_print_L.il\")")
+hiSetBindKey("Schematics" "Alt<Key>b" "load(\"~ac104265/SKILL/utils/sch_print.il\")")
+hiSetBindKey("Schematics" "Ctrl<Key>b" "load(\"~ac104265/SKILL/utils/sch_print_L.il\")")
 ; hiSetBindKey("Schematics" "Ctrl<Key>b" "sch_print_L()")
 hiSetBindKey("Schematics" "Alt<Key>r" "{CCSrestoreDefaultWireColors() schZoomFit(1.0 0.9)}")
 
@@ -250,8 +252,8 @@ hiSetBindKey("Schematics" "Alt<Key>r" "{CCSrestoreDefaultWireColors() schZoomFit
 hiSetBindKey("Schematics" "<Key>e"  "MYdescend(1)")
 hiSetBindKey("Schematics" "Ctrl<Key>x" "MYdescend(0)")
 ; worked with Sanjeev of CCS
-; hiSetBindKey("Schematics" "Ctrl<Key>x" "load(\"/home/USERNAME/SKILL/utils/descendSchNew.il\")")
-; hiSetBindKey("Schematics" "Alt<Key>x" "load(\"/home/USERNAME/SKILL/utils/descendSch.il\")")
+; hiSetBindKey("Schematics" "Ctrl<Key>x" "load(\"~ac104265/SKILL/utils/descendSchNew.il\")")
+; hiSetBindKey("Schematics" "Alt<Key>x" "load(\"~ac104265/SKILL/utils/descendSch.il\")")
 ; above now used for full path hierarchical descending..
 
 ; hiSetBindKey("Schematics" "Alt<Key>d" "zoomInst()")
@@ -259,12 +261,12 @@ hiSetBindKey("Schematics" "Ctrl<Key>x" "MYdescend(0)")
 hiSetBindKey("Schematics" "Alt<Key>d" "CCSclip() hiRegTimer(\"zoomInst(CLIPDATA)\" 10)")
 
 hiSetBindKey("Schematics" "Alt<Key>x" "hierDescend(parseString(hierPath \"/\"))")
-hiSetBindKey("Schematics" "Ctrl<Key>y" "load(\"/home/USERNAME/SKILL/utils/descendSym.il\")")
+hiSetBindKey("Schematics" "Ctrl<Key>y" "load(\"~ac104265/SKILL/utils/descendSym.il\")")
 hiSetBindKey("Schematics" "Alt<Key>e" "{hierPath=geGetInstHier(hiGetCurrentWindow()) schHiReturnToTop()}")
 hiSetBindKey("Schematics" "Alt<Key>g" "CCSSnapToGrid()")
 hiSetBindKey("Symbol" "Alt<Key>g" "CCSSnapToGrid()")
 hiSetBindKey("Schematics" "Ctrl<Key>e" "MYReturn()")
-hiSetBindKey("Schematics" "Ctrl<Key>v" "load(\"/home/USERNAME/SKILL/utils/descendVA.il\")")
+hiSetBindKey("Schematics" "Ctrl<Key>v" "load(\"~ac104265/SKILL/utils/descendVA.il\")")
 ;hiSetBindKey("Schematics" "<Key>j" "sevPrintResults('sevSession1 'dcOpPoints)")
 hiSetBindKey("Schematics" "Ctrl<Key>Up" "updatePinLabels(1.2)")
 hiSetBindKey("Schematics" "Ctrl<Key>Down" "updatePinLabels(0.8)")
@@ -277,10 +279,10 @@ hiSetBindKey("Symbol" "Ctrl<Key>Down" "updatePinLabels(0.8)")
 hiSetBindKey("Symbol" "Alt<Key>e" "{hierPath=geGetInstHier(hiGetCurrentWindow()) schHiReturnToTop()}")
 
 hiSetBindKey("Schematics" "<Key>k" "sevDirectPlot(sevSession(hiGetCurrentWindow()) 'asiDirectPlotResultsMenuCB)")
-; "load(\"/home/USERNAME/SKILL/utils/result_plot_mform.il\")")
+; "load(\"~ac104265/SKILL/utils/result_plot_mform.il\")")
 ; eliminated that file load thing on 1/31/2013
 hiSetBindKey("Schematics" "<Key>j" "_noiseSummaryPrintMenuCB('((noise noise) (pnoise pnoise)) sevSession(hiGetCurrentWindow())" )
-; "load(\"/home/USERNAME/SKILL/utils/noise_info.il\")")
+; "load(\"~ac104265/SKILL/utils/noise_info.il\")")
 ; eliminated that file load thing on 1/31/2013
 hiSetBindKey("Schematics" "Alt<Key>c" "sevOpenCalculator()")
 ; hiSetBindKey("awv" "Alt<Key>s" "awviSwitchAxisModeCB()" )
@@ -290,8 +292,8 @@ hiSetBindKey("Layout" "Ctrl<Key>2" "_leChangeEditMode(\"a\")")
 hiSetBindKey("Symbol" "Ctrl<Key>2" "schHiChangeEditMode(\"a\")")
 hiSetBindKey("Schematics" "Alt<Key>f" "schHiFind()")
 hiSetBindKey("Symbol" "Alt<Key>f" "schHiFind()")
-hiSetBindKey("Schematics" "Alt<Key>i" "load(\"/home/USERNAME/SKILL/utils/findInst.il\")")
-hiSetBindKey("Schematics" "Alt<Key>n" "load(\"/home/USERNAME/SKILL/utils/findNet.il\")")
+hiSetBindKey("Schematics" "Alt<Key>i" "load(\"~ac104265/SKILL/utils/findInst.il\")")
+hiSetBindKey("Schematics" "Alt<Key>n" "load(\"~ac104265/SKILL/utils/findNet.il\")")
 hiSetBindKey("Symbol" "Ctrl<Key>w" "hiCloseWindow(getCurrentWindow())")
 hiSetBindKey("Symbol" "Shift<Key>x" "schHiVICAndSave()")
 hiSetBindKey("Symbol" "Ctrl<Key>e" "MYReturn()")
@@ -306,12 +308,12 @@ hiSetBindKey("Show File" "Ctrl<Key>w" "hiEditFileQuitTrigger(-1 0)")
 hiSetBindKey("Schematics" "<Key>t" "_noiseSummaryPrintMenuCB('((noise noise) (pnoise pnoise)) 'sevSession1)")
 ; hiSetBindKey("awv" "Ctrl<Key>g" "myAwvToggleGrid()")
 ; hiSetBindKey("awv" "<Key>s" "awvSubwindowMenuCB()")
-; ; ; hiSetBindKey("awv" "Ctrl<Key>e" "load(\"/home/USERNAME/SKILL/utils/awv_print.il\")") ; removed 11/7/2012
+; ; ; hiSetBindKey("awv" "Ctrl<Key>e" "load(\"~ac104265/SKILL/utils/awv_print.il\")") ; removed 11/7/2012
 ; hiSetBindKey("awv" "Ctrl<Key>b"
-; "load(\"/home/USERNAME/SKILL/utils/awv_print_gv.il")")
-; hiSetBindKey("awv" "Ctrl<Key>e" "load(\"/home/USERNAME/SKILL/utils/awv_print_gv_L.il\")")
-; hiSetBindKey("awv" "Ctrl<Key>x" "load(\"/home/USERNAME/SKILL/utils/awv_x_log.il\")")
-; ; ; hiSetBindKey("awv" "Ctrl<Key>t" "load(\"/home/USERNAME/SKILL/utils/awv_x_auto.il\")") ; 11/14/2012
+; "load(\"~ac104265/SKILL/utils/awv_print_gv.il")")
+; hiSetBindKey("awv" "Ctrl<Key>e" "load(\"~ac104265/SKILL/utils/awv_print_gv_L.il\")")
+; hiSetBindKey("awv" "Ctrl<Key>x" "load(\"~ac104265/SKILL/utils/awv_x_log.il\")")
+; ; ; hiSetBindKey("awv" "Ctrl<Key>t" "load(\"~ac104265/SKILL/utils/awv_x_auto.il\")") ; 11/14/2012
 ; hiSetBindKey("awv" "<Key>c" "sevOpenCalculator()")
 
 hiSetBindKey("Read veriloga" "Ctrl<Key>w" "schHdlCloseWindow( getCurrentWindow() nil)")
@@ -334,18 +336,18 @@ hiSetBindKey("Schematics" "<Key>q" "hiSetFormSize(schObjPropForm list(500 1000))
 hiSetBindKey("Schematics" "None<Btn1Down>(2)" "schExtendSelectPt()")
 
 ; property form from S Pradeep Raja
-load("/home/USERNAME/SKILL/CCS/CCSpbSchObjProp.il")
+load("~ac104265/SKILL/CCS/CCSpbSchObjProp.il")
 
 ; 7/26/16 from Likesh Sahoo - select all of a wire with only one segment already selected
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>w" "geSelectFigs( car(geGetSelSet()~>net~>figs) )" )
 
-load("/home/USERNAME/SKILL/utils/lcPinNames.il")
+load("~ac104265/SKILL/utils/lcPinNames.il")
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>5" "lcPinNames( 1 )" )
 hiSetBindKey( "Symbol" "Ctrl Alt<Key>5" "lcPinNames( 1 )" )
-load("/home/USERNAME/SKILL/utils/lcLabels.il")
+load("~ac104265/SKILL/utils/lcLabels.il")
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>6" "lcLabels( )" )
 ; 8/1/16
-load("/home/USERNAME/SKILL/utils/symIncreasePinSpacing.il")
+load("~ac104265/SKILL/utils/symIncreasePinSpacing.il")
 hiSetBindKey("Symbol" "Ctrl<Key>+" "symIncreasePinSpacing(1)") 
 hiSetBindKey("Symbol" "Ctrl<Key>-" "symIncreasePinSpacing(-1)")
 hiSetBindKey("Symbol" "Ctrl<Key>KP_Add" "symIncreasePinSpacing(1)") 
@@ -360,66 +362,66 @@ hiSetBindKey( "Schematics" "Ctrl Shift<Key>l" "foreach( obj saved_sel geSelectOb
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>x" "geDeleteAllMarker( geGetEditCellView())" )
 
 ; 9/3/16
-load( "/home/USERNAME/SKILL/utils/pinName2ClipBoard.il" )
+load( "~ac104265/SKILL/utils/pinName2ClipBoard.il" )
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>c" "pinName2ClipBoard()" )
 
 ; 9/5/16 , 10/3/16
-load "/home/USERNAME/SKILL/utils/createOrSelPins.il"
+load "~ac104265/SKILL/utils/createOrSelPins.il"
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>p" "createOrSelPins()" )
 hiSetBindKey( "Symbol" "Ctrl Shift<Key>p" "schHiSelectByProperty( \"select\" \"pinName\" \"==\" \"*\" )" )
 
-load( "/home/USERNAME/SKILL/utils/horizontalize.il" )
+load( "~ac104265/SKILL/utils/horizontalize.il" )
 hiSetBindKey( "Symbol" "Ctrl Shift<Key>h" "horizontalize()" )
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>h" "horizontalize()" )
 
-load( "/home/USERNAME/SKILL/utils/roundPinsToLine.il" )
-load( "/home/USERNAME/SKILL/utils/squarePinsToLine.il" )
-load( "/home/USERNAME/SKILL/utils/arrows.il" )
+load( "~ac104265/SKILL/utils/roundPinsToLine.il" )
+load( "~ac104265/SKILL/utils/squarePinsToLine.il" )
+load( "~ac104265/SKILL/utils/arrows.il" )
 
 ; 9/9/16
-load "/home/USERNAME/SKILL/utils/zoomText.il"
+load "~ac104265/SKILL/utils/zoomText.il"
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>d" "zoomText()" )
 
 ; 9/12/16
-load "/home/USERNAME/SKILL/utils/toglImportSplitRseg.il"
+load "~ac104265/SKILL/utils/toglImportSplitRseg.il"
 
 ; 9/30/16; 10/7/16
-load "/home/USERNAME/SKILL/utils/MYflip.il"
+load "~ac104265/SKILL/utils/MYflip.il"
 hiSetBindKey( "Schematics" "Ctrl <Key>h" "MYflip(1)" )
 hiSetBindKey( "Schematics" "Ctrl <Key>u" "MYflip(0)" )
 hiSetBindKey( "Symbol" "Ctrl <Key>h" "MYflip(1)" )
 hiSetBindKey( "Symbol" "Ctrl <Key>u" "MYflip(0)" )
 
 ; 10/3/16
-load "/home/USERNAME/SKILL/utils/selSimilar.il"
+load "~ac104265/SKILL/utils/selSimilar.il"
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>h" "selSimilar()" )
 hiSetBindKey( "Layout" "Ctrl Alt<Key>h" "selSimilar()" )
 
 ; 10/7/16
-load("/home/USERNAME/SKILL/utils/inc_bus.il")
-load("/home/USERNAME/SKILL/utils/inc_wire_inst.il")
+load("~ac104265/SKILL/utils/inc_bus.il")
+load("~ac104265/SKILL/utils/inc_wire_inst.il")
 
-load("/home/USERNAME/SKILL/utils/fl_nodes.il")
-load("/home/USERNAME/SKILL/utils/getWinNum.il")
+load("~ac104265/SKILL/utils/fl_nodes.il")
+load("~ac104265/SKILL/utils/getWinNum.il")
 
 ; 11/29/16 after Bhupendra Kumar helped out..
-load "/home/USERNAME/SKILL/utils/selectInTableView.il"
+load "~ac104265/SKILL/utils/selectInTableView.il"
 hiSetBindKey( "Schematics" "Ctrl <Key>i" "heHiEditConfig() selectInTableView()" )
 
 
 ; 1/26/17
-load "/home/USERNAME/SKILL/utils/listInstPaths.il"
+load "~ac104265/SKILL/utils/listInstPaths.il"
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>l" "listInstPaths()" )
 
 ; 2/8/17
-load "/home/USERNAME/SKILL/utils/toglInstMstrDisplay.il"
+load "~ac104265/SKILL/utils/toglInstMstrDisplay.il"
 hiSetBindKey( "Layout" "Ctrl Alt<Key>d" "toglInstMstrDisplay()" )
 
 ; 2/15/17
-load "/home/USERNAME/SKILL/utils/setInstNamePrefix.il"
+load "~ac104265/SKILL/utils/setInstNamePrefix.il"
 
 ; 3/1/17
-load "/home/USERNAME/SKILL/utils/removeColors.il"
+load "~ac104265/SKILL/utils/removeColors.il"
 hiSetBindKey( "Schematics" "<Key>F7" "removeColors()" )
 hiSetBindKey( "Schematics" "Ctrl <Key>F7" "geResetCellView(deGetCellView())" )
 
@@ -427,11 +429,11 @@ hiSetBindKey( "Schematics" "Ctrl <Key>F7" "geResetCellView(deGetCellView())" )
 hiSetBindKey( "Schematics" "Alt <Key>Q" "schHiSelectByProperty(\"select\")" )
 
 ; 3/21/17
-load "/home/USERNAME/SKILL/utils/fixPartName.il"
+load "~ac104265/SKILL/utils/fixPartName.il"
 hiSetBindKey( "Symbol" "Ctrl Alt<Key>C" "fixPartName()" )
 
 ; 4/3/17
-load "/home/USERNAME/SKILL/utils/openSelReadOnly.il" ; ctrl shift <key>n
+load "~ac104265/SKILL/utils/openSelReadOnly.il" ; Ctrl Shift<Key>n
 
 ; 5/18/17
 hiSetBindKey("Schematics" "Alt Shift<Key>h" "heHiEditConfig()")
@@ -446,12 +448,12 @@ hiSetBindKey("Layout" "Alt <Key>v" "pteSetVisible(\"Vias\" !pteIsVisible(\"Vias\
 hiSetBindKey("Schematics" "Alt Shift<Key>d" "MYappendTranDiff()")
 
 ; 5/2/18
-load "/home/USERNAME/SKILL/utils/renameInsts.il"
+load "~ac104265/SKILL/utils/renameInsts.il"
 hiSetBindKey("Schematics" "Ctrl Alt<Key>i" "renameInsts()")
 
 ;7/30/18
-load "/home/USERNAME/SKILL/utils/txpose_bus.il"
-load "/home/USERNAME/SKILL/utils/txpose_inst_label.il"
+load "~ac104265/SKILL/utils/txpose_bus.il"
+load "~ac104265/SKILL/utils/txpose_inst_label.il"
 ; 1/11/20
 ;hiSetBindKey("Schematics" "Alt Shift<Btn4Down>" "txpose_inst_label('t)")
 ;hiSetBindKey("Schematics" "Alt Shift<Btn5Down>" "txpose_inst_label(nil)")
@@ -464,11 +466,11 @@ hiSetBindKey( "Schematics" "Shift <Key>q" "schHiCreateNoteShape( ?shape \"polygo
 hiSetBindKey( "Schematics" "<Key>n" "schHiCreateNoteShape( ?shape \"line\" ?style \"solid\" ?width 0)")
 
 ; 7/26/18
-hiSetBindKey("Schematics" "Alt Shift <Key>q" "load( \"/home/USERNAME/SKILL/utils/sch_prop_all_sel.il\" )" )
-hiSetBindKey("Schematics" "<Key>q" "load( \"/home/USERNAME/SKILL/utils/sch_prop_only_current.il\" )" )
+hiSetBindKey("Schematics" "Alt Shift <Key>q" "load( \"~ac104265/SKILL/utils/sch_prop_all_sel.il\" )" )
+hiSetBindKey("Schematics" "<Key>q" "load( \"~ac104265/SKILL/utils/sch_prop_only_current.il\" )" )
 
 ; 8/25/18
-load "/home/USERNAME/SKILL/utils/CreateLibManSelInst.il"
+load "~ac104265/SKILL/utils/CreateLibManSelInst.il"
 hiSetBindKey("Schematics" "Ctrl Alt <Key>n" "CreateLibManSelInst()" )
 ; 8/13/19
 hiSetBindKey("Layout" "Ctrl Alt <Key>n" "CreateLibManSelInst()" )
@@ -498,18 +500,18 @@ then
 )
 
 ; 9/14/18 thanks Sameer Garg
-load "/home/USERNAME/SKILL/utils/getLastInstInfo.il"
+load "~ac104265/SKILL/utils/getLastInstInfo.il"
 
 ; 9/16/18
-load "/home/USERNAME/SKILL/utils/subJumpBack.il"
+load "~ac104265/SKILL/utils/subJumpBack.il"
 hiSetBindKey( "Schematics" "Ctrl Alt <Key>e" "subJumpBack()" )
 
 ; 9/19/18
-load "/home/USERNAME/SKILL/utils/libManSelectTB.il"
+load "~ac104265/SKILL/utils/libManSelectTB.il"
 ; contains CTRL-ALT-T to locate testbench
 
 ; 09/28/18
-load "/home/USERNAME/SKILL/utils/copyResVal.il"
+load "~ac104265/SKILL/utils/copyResVal.il"
 hiSetBindKey("Schematics" "Ctrl Alt<Key>r" "copyResVal()")
 
 ;10/31/18
@@ -519,7 +521,7 @@ hiSetBindKey("vivaGraph" "Ctrl<Key>d" "and(setq(sessionName awvGetCurrentWindow(
 hiSetBindKey("Schematics" "Ctrl Shift<Key>o" "{selectResults('dcOpInfo) report(?output \"param.txt\" ?format \"spice\")}")
 
 ;12/20/18 ; 01/23/19
-load "/home/USERNAME/SKILL/utils/genNetlist.il"
+load "~ac104265/SKILL/utils/genNetlist.il"
 hiSetBindKey("Schematics" "Alt Shift<Key>n" "genNetlist()")
 
 ;01/02/19
@@ -529,84 +531,85 @@ hiSetBindKey("Schematics" "Alt Shift<Key>l" "ddsOpenLibManager()")
 hiSetBindKey("Schematics" "Ctrl Alt <Key>q" "sevQuit(sevSession(hiGetCurrentWindow()) )")
 
 ;02/18/19
-load "/home/USERNAME/SKILL/utils/incrText.il"
+load "~ac104265/SKILL/utils/incrText.il"
 hiSetBindKey( "Schematics" "Ctrl <Key>PageUp" "incrText( 1 )" )
 hiSetBindKey( "Schematics" "Ctrl <Key>PageDown" "incrText( -1 )" )
 
 ;03/10/19
-load "/home/USERNAME/SKILL/utils/loadLatestRun.il"
+load "~ac104265/SKILL/utils/loadLatestRun.il"
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>R" "loadLatestRun()" )
 
 ;07/01/19
-load "/home/USERNAME/SKILL/utils/togl_ViVA_Browser.il"
+load "~ac104265/SKILL/utils/togl_ViVA_Browser.il"
 hiSetBindKey("vivaGraph" "Ctrl<Key>b" "togl_ViVA_Browser()")
 
 ;07/09/19
-load "/home/USERNAME/SKILL/utils/rePlotOverlay.il"
+load "~ac104265/SKILL/utils/rePlotOverlay.il"
 hiSetBindKey("Schematics" "Alt Shift <Key>p" "rePlotOverlay()")
 
 ; 7/31/19 -- THanks Edwin of Perforce (IC Manage )
-load "/home/USERNAME/SKILL/utils/ICM_libManSelectInst.il"
+load "~ac104265/SKILL/utils/ICM_libManSelectInst.il"
 
 ; 10/9/19
-load "/home/USERNAME/SKILL/utils/putViewName.il" 
+load "~ac104265/SKILL/utils/putViewName.il" 
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>s" "putViewName()" )
 
 ; 1/11/20
-load "/home/USERNAME/SKILL/utils/proc_alt_sh_scroll.il"
-load "/home/USERNAME/SKILL/utils/updateTemp.il"
+load "~ac104265/SKILL/utils/proc_alt_sh_scroll.il"
+load "~ac104265/SKILL/utils/updateTemp.il"
 hiSetBindKey("Schematics" "Alt Shift<Btn4Down>" "proc_alt_sh_scroll_up()")
 hiSetBindKey("Schematics" "Alt Shift<Btn5Down>" "proc_alt_sh_scroll_down()")
 
 ; 2/7/20
-; load "/home/USERNAME/SKILL/utils/viva_condense.il"	; don't know what this does seems useless :)
+; load "~ac104265/SKILL/utils/viva_condense.il"	; don't know what this does seems useless :)
 ; hiSetBindKey("vivaGraph" "Alt Shift<Key>e" "viva_condense()")
 
 ; 3/11/2020
-load "/home/USERNAME/SKILL/utils/list_pins.il"
+load "~ac104265/SKILL/utils/list_pins.il"
 
 ; 8/6/2020
 hiSetBindKey("vivaGraph" "Alt Shift<Key>s" "_ddtExecuteAction(awvGetCurrentWindow()->vivaSession \"moveTracesNewStrip\")")
 
 ; 8/9/2020
-load "/home/USERNAME/SKILL/utils/getPlotsAsText.il"
+load "~ac104265/SKILL/utils/getPlotsAsText.il"
 hiSetBindKey("Schematics" "Alt Shift<Key>w" "getPlotsAsText()")
-load "/home/USERNAME/SKILL/utils/plotTextWaves.il"
+load "~ac104265/SKILL/utils/plotTextWaves.il"
 hiSetBindKey("Schematics" "Ctrl Shift<Key>w" "plotTextWaves()")
 
 hiSetBindKey("Schematics" "Alt <Key>s" "_schHiSave()")
 
-load "/home/USERNAME/SKILL/utils/tag_labels.il"
+load "~ac104265/SKILL/utils/tag_labels.il"
 hiSetBindKey("Schematics" "Ctrl Alt<Key>_" "tag_labels()")
 
-load "/home/USERNAME/SKILL/utils/toglOnlyWireLblSel.il"
+load "~ac104265/SKILL/utils/toglOnlyWireLblSel.il"
 hiSetBindKey("Schematics" "Ctrl Shift<Key>w" "toglOnlyWireLblSel()")
 
-load "/home/USERNAME/SKILL/utils/HEDoffTopCellGlobalBindings.il"
+load "~ac104265/SKILL/utils/HEDoffTopCellGlobalBindings.il"
 hiSetBindKey("Cadence Hierarchy Editor" "Ctrl <Key>1" "HEDoffTopCellGlobalBindings()" )
 hiSetBindKey("Schematics" "Ctrl <Key>1" "HEDoffTopCellGlobalBindings()" )
 
-load "/home/USERNAME/SKILL/utils/smartIncPinSpace.il"
+load "~ac104265/SKILL/utils/smartIncPinSpace.il"
 hiSetBindKey("Schematics" "Ctrl Shift<Key>]" "smartIncPinSpace(\"+\")") ; 5/30/21
 hiSetBindKey("Schematics" "Ctrl Shift<Key>[" "smartIncPinSpace(\"-\")") ; 5/30/21
 
 hiSetBindKey( "vivaGraph" "Ctrl Shift<Key>d" "awvDeleteSubwindow( awvGetCurrentWindow() )")
 
 ; 9/2/21
-load "/home/USERNAME/SKILL/utils/delDashEllipse.il"
+load "~ac104265/SKILL/utils/delDashEllipse.il"
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>d" "delDashEllipse() ")
 
 ; 9/29/21
 hiSetBindKey( "Schematics" "Ctrl Alt Shift<Key>r" "sevRunEngine( sevSession(hiGetCurrentWindow() ) )")
 
-load "~/SKILL/utils/toggleCase.il"
+; 3/10/22
+load "~ac104265/SKILL/utils/toggleCase.il"
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>c" "toggleCase()" )
 
 ; 3/28/22 after Lalit tells me they did modify to ignore the don't-confirm setting between ISR16 and 23
 hiSetBindKey("vivaGraph" "<Key>e" "_ddtExecuteAction(awvGetCurrentWindow()->vivaSession \"deleteObjects\") ")
 
 ; 4/12/22 toggle net highlighting
-load "~/SKILL/utils/togl_net_hilite.il"
+load "~ac104265/SKILL/utils/togl_net_hilite.il"
 hiSetBindKey( "Schematics" "Ctrl Alt Shift<Key>d" "togl_net_hilite()" )
 
 ; 5/16/22  was geHiDeleteMarker()
@@ -618,7 +621,7 @@ hiSetBindKey("Schematics" "Ctrl <Key>v" "{ MYLIB=schCreateInstForm->libraryName-
 MYCELL=schCreateInstForm->cellName->value MYVIEW=schCreateInstForm->viewName->value \
 schHiCreateInst(\"analogLib\" \"vdc\" \"symbol\") }")
 
-load "~/SKILL/utils/cpLibCell2Clipboard.il"
+load "~ac104265/SKILL/utils/cpLibCell2Clipboard.il"
 hiSetBindKey( "Schematics" "Alt Shift<Key>c" "cpLibCell2Clipboard()" )
 
 ; 8/30/22 
@@ -629,7 +632,10 @@ hiSetBindKey( "Schematics" "Ctrl Shift<Key>t" "desc_new_tab(1)" ) ; new tab
 hiSetBindKey( "Layout" "Ctrl <Key>h" "_leRotateOrFlip(\"MY\")" ) ; flip horizontal
 
 ; 10/28/22
-load "~/SKILL/utils/suffix.il"
+load "~ac104265/SKILL/utils/suffix.il"
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>e" "rmvSuffix()" ) ; remove suffix
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>f" "putSuffix()" ) ; put suffix
 hiSetBindKey( "Schematics" "Ctrl Alt<Key>g" "getSuffix()" ) ; get suffix --> SUFFIX variable
+
+; 12/8/22
+hiSetBindKey("Schematics" "Alt Shift<Key>4" "explAppendTranDiff()") ; to be used with Explorer (MYappendSignal.il)
