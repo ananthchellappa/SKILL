@@ -25,7 +25,7 @@ if(cfgId then
  	    pcdbInstGen=pcdbGetInstGen(pcdbInstMaster)
  	    pcdbInst=pcdbNextInst(pcdbInstGen)
  	    while( pcdbInst && notFound
- 	      if( pcdbInstName(pcdbInst)== currentInst then
+ 	       	if( car(parseString(pcdbInstName(pcdbInst) "<:>"))==car(parseString(currentInst "<>")) then
  	    	notFound=nil
  	    	curLibName  = pcdbInstMasterLib(pcdbInstMaster)
  	    	curCellName = pcdbInstMasterCell(pcdbInstMaster)
