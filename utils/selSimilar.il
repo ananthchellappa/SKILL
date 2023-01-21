@@ -1,22 +1,23 @@
-; use a bindkey to select all of the same cellName as the selected instance
+; use a bindkey to select all of the same libName,cellName as the selected instance
+; nothing selected? Then use selection in the library manager
 
 procedure( selSimilar( )
-   let( (cv inst sought)
-    	cv = geGetEditCellView(getCurrentWindow())
-		if( ("schematic" == cv~>cellViewType )
+	let( (cv inst sought id)
+		cv = geGetEditCellView(getCurrentWindow())
+		if( 0 < length( geGetSelSet() )
 		then
-			schHiSelectByProperty( "select" "cellName" "==" car(geGetSelSet() )~>cellName )
+			lib = car(geGetSelSet() )~>libName
+			cell = car(geGetSelSet() )~>cellName
 		else
-			if( ("maskLayout" == cv~>cellViewType )
+			id = ddsGetLibManLCV()
+			lib = car( id )
+			cell = cadr( id )
+		)
+		foreach( inst cv~>instances
+			if( and(inst~>libName == lib, if( "" != cell then inst~>cellName == cell else t ) )
 			then
-				sought = car(geGetSelSet() )~>cellName
-				foreach( inst cv~>instances
-					if( inst~>cellName == sought
-					then
-						geSelectFig( inst )
-					)
-				)
-			); if
-		) ; if			
-   ); let
+				geSelectFig( inst )
+			)
+		)
+	); let
 ) ; procedure
