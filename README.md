@@ -11,8 +11,8 @@ It is a collection of **utilities and settings** that boost productivity when us
 - **dotfiles/** # the `.cdsenv` and `.cdsinit` files with the important settings. View and comment out the ones you don't plan on using. The comments in the files should help. The `load bindkeys.il` in the `.cdsinit` is what loads the bindkey utilities
 - **guide.PDF** # cheat sheet (WIP)
 - **guide.xlsx** # source for the cheat-sheet so you can customize
-- **images/** # some demos captured using Justin Frankel's LICEcap (WIP)
-- **utils** # the various utilities (`.il` files) 
+- **demos/** # some demos captured using Justin Frankel's LICEcap (WIP)
+- **utils/** # the various utilities (`.il` files) 
 - **`bindkeys.il`** the loader
 
 ### How do I use it?
