@@ -642,3 +642,7 @@ hiSetBindKey("Schematics" "Alt Shift<Key>4" "explAppendTranDiff()") ; to be used
 
 ; 3/29/23
 hiSetBindKey("Schematics" "Ctrl Shift<Key>i" "toglOnlyInstSel()")
+
+; 3/31/23 Shyam Gupta on 46691233
+load "~/ac104265/SKILL/CCS/CCSPushViVA.il"
+hiSetBindKey("Schematics" "Ctrl Alt<Key>v" "CCSPushViVA(\"tran\")" )
