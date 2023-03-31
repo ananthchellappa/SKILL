@@ -646,3 +646,6 @@ hiSetBindKey("Schematics" "Ctrl Shift<Key>i" "toglOnlyInstSel()")
 ; 3/31/23 Shyam Gupta on 46691233
 load "~/SKILL/CCS/CCSPushViVA.il"
 hiSetBindKey("Schematics" "Ctrl Alt<Key>v" "CCSPushViVA(\"tran\")" )
+load "~/SKILL/CCS/CCSAbutAlignInstances.il"
+hiSetBindKey( "Layout" "Ctrl Alt <Key>v" "CCSAbutAlignInstances(\"vertical\")" )
+hiSetBindKey( "Layout" "Ctrl Alt Shift <Key>h" "CCSAbutAlignInstances(\"horizontal\")" )
