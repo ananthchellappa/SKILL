@@ -6,7 +6,7 @@ procedure(CCSPushViVA(result)
     unless(rexMatchp("chematic" hiGetAppType(win))
        error("\nCurrent window is not schematic application ...\n")
     ) ;unless
-    hierL = strcat(/ geGetTopLevelCellView(win)~>cellName geGetInstHier())
+    hierL = strcat("/" geGetTopLevelCellView(win)~>cellName geGetInstHier())
     when(result=="tran"
     	res = "tran-tran"
     ) ;when
