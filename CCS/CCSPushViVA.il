@@ -1,3 +1,4 @@
+
 ; works for ADE-L/Assembler Debug env. For Explorer, needs 
 ; rdbSetCurrentDirectory(axlGetWindowSession(win) finalPath
 procedure(CCSPushViVA(result)
@@ -6,11 +7,16 @@ procedure(CCSPushViVA(result)
     unless(rexMatchp("chematic" hiGetAppType(win))
        error("\nCurrent window is not schematic application ...\n")
     ) ;unless
-    hierL = strcat("/" geGetTopLevelCellView(win)~>cellName geGetInstHier())
+    sess = asiGetSession(win)
+	if( "spectre" == sevSession(win)~>simulator
+	then
+    	hierL = geGetInstHier()
+	else
+		hierL = strcat( "/" geGetTopLevelCellView(win)~>cellName geGetInstHier())
+	)
     when(result=="tran"
     	res = "tran-tran"
     ) ;when
-    sess = asiGetSession(win)
     resDir = asiGetResultsPsfDir(sess)
     finalPath = strcat(resDir "/" res hierL)
     rdbSetCurrentDirectory( symbolToString(sevSession(hiGetCurrentWindow())) finalPath)
