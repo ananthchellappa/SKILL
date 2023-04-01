@@ -649,3 +649,8 @@ hiSetBindKey("Schematics" "Ctrl Alt<Key>v" "CCSPushViVA(\"tran\")" )
 load "~/SKILL/CCS/CCSAbutAlignInstances.il"
 hiSetBindKey( "Layout" "Ctrl Alt <Key>v" "CCSAbutAlignInstances(\"vertical\")" )
 hiSetBindKey( "Layout" "Ctrl Alt Shift <Key>h" "CCSAbutAlignInstances(\"horizontal\")" )
+load "~/SKILL/utils/getAlignDir.il"
+load "~/SKILL/utils/inc_spc.il"
+
+hiSetBindKey("Layout" "Alt<Btn4Down>" "inc_spc(t)")
+hiSetBindKey("Layout" "Alt<Btn5Down>" "inc_spc(nil)")
