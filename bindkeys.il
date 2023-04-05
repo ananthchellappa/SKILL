@@ -654,3 +654,6 @@ load "~/SKILL/utils/inc_spc.il"
 
 hiSetBindKey("Layout" "Alt<Btn4Down>" "inc_spc(t)")
 hiSetBindKey("Layout" "Alt<Btn5Down>" "inc_spc(nil)")
+
+; 4/5/23
+hiSetBindKey( "Layout" "Ctrl Alt <Key>x" "lxHiSwap()" )
