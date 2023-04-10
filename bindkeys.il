@@ -641,6 +641,7 @@ hiSetBindKey( "Schematics" "Ctrl Alt<Key>g" "getSuffix()" ) ; get suffix --> SUF
 hiSetBindKey("Schematics" "Alt Shift<Key>4" "explAppendTranDiff()") ; to be used with Explorer (MYappendSignal.il)
 
 ; 3/29/23
+load "~/SKILL/utils/toglOnlyInstSel.il"
 hiSetBindKey("Schematics" "Ctrl Shift<Key>i" "toglOnlyInstSel()")
 
 ; 3/31/23 Shyam Gupta on 46691233
