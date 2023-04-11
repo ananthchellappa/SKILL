@@ -658,3 +658,7 @@ hiSetBindKey("Layout" "Alt<Btn5Down>" "inc_spc(nil)")
 
 ; 4/5/23
 hiSetBindKey( "Layout" "Ctrl Alt <Key>x" "lxHiSwap()" )
+
+; 4/10/23
+load "~/SKILL/utils/launch_ADE_L.il"
+hiSetBindKey("Schematics" "Ctrl Alt Shift<Key>l" "launch_ADE_L()" )
