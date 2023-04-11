@@ -1,0 +1,6 @@
+procedure( launch_ADE_L()
+	let( (cv )
+		cv = geGetWindowCellView()
+		sevSetDesign( sevStartSession() list(cv~>libName cv~>cellName cv~>viewName)) 
+	)
+)
