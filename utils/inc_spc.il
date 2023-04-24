@@ -1,18 +1,19 @@
-
 procedure( inc_spc( incr ) ; boolean t for increment
-	let( (dir spc dir_spc)
+	let( (dir spc dir_spc grid spc_gdunits)
+		grid = techGetMfgGridResolution(techGetTechFile(geGetEditCellView()))
 		dir_spc = getAlignDir()
 		if( dir_spc 
 		then
 			dir = car(dir_spc)
 			spc = cadr( dir_spc)
+			spc_gdunits = spc/grid
 			if( spc > 0
 			then
 				if( incr
 				then
-					CCSAbutAlignInstances(dir spc*1.25)
+					CCSAbutAlignInstances(dir grid*round(1.25*spc_gdunits + 0.5))
 				else
-					CCSAbutAlignInstances(dir spc*0.8)
+					CCSAbutAlignInstances(dir grid*round(0.8*spc_gdunits - 0.5))
 				)
 			else
 				if( incr 
@@ -22,4 +23,3 @@ procedure( inc_spc( incr ) ; boolean t for increment
 		); if
 	); let
 ); proc
-
