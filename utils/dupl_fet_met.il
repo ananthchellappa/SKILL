@@ -26,6 +26,7 @@ procedure( dupl_fet_met() ; process all insts from selected set and add the meta
 				)
 				finList = append(finList iShpList)
  			) ; foreach
+			geDeselectAll()
 			geSelectFigs(finList)
 		) ; let
 	) ; if
