@@ -31,3 +31,18 @@ procedure( get_orient_stretch_coord( bc_bBox, sd_bBox )
         )
     )
 )
+
+; tested - have a few rects of same size, select in random order (SHIFT + click), then 
+; rl = geGetSelSet() ; srl = sort( rl 'compare_bBox) ; now use geSelectFig( car(srl)) ; cadr(srl); etc to verify
+procedure( compare_bBox( sh1 sh2 )
+	if( xCoord(car(sh1~>bBox)) == xCoord(car(sh2~>bBox)) && xCoord(cadr(sh1~>bBox)) == xCoord(cadr(sh2~>bBox))
+	then
+		yCoord(car(sh2~>bBox)) < yCoord(car(sh1~>bBox))
+	else
+		if( yCoord(car(sh1~>bBox)) == yCoord(car(sh2~>bBox)) && yCoord(cadr(sh1~>bBox)) == yCoord(cadr(sh2~>bBox))
+		then
+			xCoord(car(sh2~>bBox)) > xCoord(car(sh1~>bBox))
+		else nil
+		)
+	)
+)
