@@ -59,7 +59,7 @@ procedure( gen_bBox( axis_ref offset edges orient )
 			ret_bBox = list( (axis_ref - 1.5*offset) : car(edges)  (axis_ref - 0.5*offset) : cadr(edges) )
 		)
 		if( "west" == orient then
-			ret_bBox = list( (axis_ref + 0.5*offset) + car(edges)  (axis_ref + 1.5*offset) + cadr(edges) )
+			ret_bBox = list( (axis_ref + 0.5*offset) : car(edges)  (axis_ref + 1.5*offset) : cadr(edges) )
 		)
 		ret_bBox
 	)
