@@ -46,3 +46,22 @@ procedure( compare_bBox( sh1 sh2 )
 		)
 	)
 )
+
+procedure( gen_bBox( axis_ref offset edges orient )
+	let( (ret_bBox)
+		if( "north" == orient then
+			ret_bBox = list( car(edges) : (axis_ref - offset/2.0)  cadr(edges) : (axis_ref - 1.5*offset) )
+		)
+		if( "south" == orient then
+			ret_bBox = list( car(edges) : (axis_ref + offset/2.0)  cadr(edges) : (axis_ref + 1.5*offset) )
+		)
+		if( "east" == orient then
+			ret_bBox = list( (axis_ref - 1.5*offset) : car(edges)  (axis_ref - 0.5*offset) : cadr(edges) )
+		)
+		if( "west" == orient then
+			ret_bBox = list( (axis_ref + 0.5*offset) + car(edges)  (axis_ref + 1.5*offset) + cadr(edges) )
+		)
+		ret_bBox
+	)
+)
+
