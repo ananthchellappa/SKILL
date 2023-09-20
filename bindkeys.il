@@ -665,4 +665,4 @@ hiSetBindKey("Schematics" "Ctrl Alt Shift<Key>l" "launch_ADE_L()" )
 
 ; 9/20/23
 load "~/SKILL/utils/disp_fet_info.il" )
-SetBindKey("Schematics" "Ctrl Alt <Key>1" "disp_fet_info()" )
+hiSetBindKey("Schematics" "Ctrl Alt <Key>1" "disp_fet_info()" )
