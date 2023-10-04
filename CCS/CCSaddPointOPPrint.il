@@ -5,7 +5,8 @@ procedure( CCSaddPointOPPrint( w pt)
         x=car(geGetSelSet())
         if(and(x x~>objType=="inst") then
             params = list("vgs", "vth", "vds", "vdsat", "ids", "gm", "gds")
-            iName = strcat(geGetInstHier() "/" x~>name)
+		    rexCompile(":[0-9]+")
+			iName = strcat(geGetInstHier() "/" rexReplace(x~>name "" 1) )
             printf("\nPrinting OP Params for %s\n" iName)
             foreach( param params
                     printf( " %s\t\t%s\n" , param, aelSuffixNotation( OP(iName param )))
