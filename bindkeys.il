@@ -664,5 +664,8 @@ load "~/SKILL/utils/launch_ADE_L.il"
 hiSetBindKey("Schematics" "Ctrl Alt Shift<Key>l" "launch_ADE_L()" )
 
 ; 9/20/23
-load "~/SKILL/utils/disp_fet_info.il" )
-hiSetBindKey("Schematics" "Ctrl Alt <Key>1" "disp_fet_info()" )
+;load "~/SKILL/utils/disp_fet_info.il"
+; 10/4/23
+load "~/SKILL/CCS/CCSaddPointOPPrint.il"
+hiSetBindKey("Schematics" "Ctrl Alt <Key>1" "CCSpnt()" )
+
