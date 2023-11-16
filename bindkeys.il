@@ -669,3 +669,6 @@ hiSetBindKey("Schematics" "Ctrl Alt Shift<Key>l" "launch_ADE_L()" )
 load "~/SKILL/CCS/CCSaddPointOPPrint.il"
 hiSetBindKey("Schematics" "Ctrl Alt <Key>1" "CCSpnt()" )
 
+; 11/16/23 - instantiate title_blk with CTRL SHIFT N - which takes over openSelReadOnly and calls it..
+load "~/SKILL/utils/instTitleBlk.il" 
+hiSetBindKey("Schematics" "Ctrl Shift <Key>n" "instTitleBlk()" )
