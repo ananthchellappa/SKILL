@@ -672,3 +672,8 @@ hiSetBindKey("Schematics" "Ctrl Alt <Key>1" "CCSpnt()" )
 ; 11/16/23 - instantiate title_blk with CTRL SHIFT N - which takes over openSelReadOnly and calls it..
 load "~/SKILL/utils/instTitleBlk.il" 
 hiSetBindKey("Schematics" "Ctrl Shift <Key>n" "instTitleBlk()" )
+
+; 2/15/24 - layout productivity
+hiSetBindKey( "Layout" "Ctrl <Key>h" "_leRotateOrFlip(\"MY\")" )
+hiSetBindKey( "Layout" "Ctrl <Key>u" "_leRotateOrFlip(\"MX\")" )
+load "~/SKILL/CCS/CCSeditViaRowsCols.il" # CTRL ALT/SHIFT/both mouse scroll wheel change via size
