@@ -27,7 +27,7 @@ procedure(CCSLibManSelectInst()
 	else
 		cv = geGetWindowCellView()
 		ddsSetLibManLCV(cv~>libName cv~>cellName cv~>viewName)	; hit on 9/27 - do this anyways.. :)
-		if( rexMatchp( "_sim$" cv~>cellName)
+		if( cv~>mode != "r" && rexMatchp( "_sim$" cv~>cellName )
 		; means it's something like DUT_sim so now we want to instantiate DUT! :)
 		then
 			if( rexMatchp( "_[Ss]im$" cv~>libName )
