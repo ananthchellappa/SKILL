@@ -680,3 +680,6 @@ load "~/SKILL/CCS/CCSeditViaRowsCols.il" # CTRL ALT/SHIFT/both mouse scroll whee
 
 ; 2/22/24
 load "~/SKILL/CCS/CCSvxlRaiseSchWin.il" ; raise schematic window used as conn reference in layout XL ALT-H
+
+; 2/25/24
+load "~/SKILL/utils/toggle_group.il" ; toggle group/ungroup with CTRL G
