@@ -9,12 +9,21 @@ procedure( CreateLibManSelInst()
 		view = caddr( id )
 			if( and( "" != lib , "" != cell )
 			then
-				if( "" != view
+				if( "schematic" == hiGetCurrentWindow()~>cellView~>cellViewType
 				then
-					schHiCreateInst( lib cell view )
+					if( "" != view
+					then
+						schHiCreateInst( lib cell view )
+					else
+						schHiCreateInst( lib cell "symbol" )	; ideally would check this exists :)
+					) ; if
 				else
-					schHiCreateInst( lib cell "symbol" )	; ideally would check this exists :)
-				) ; if 
+					view = "layout"
+; leCreateInstLForm->cellName->value="anlg_cntl"
+					hiRegTimer("leCreateInstLForm->cellName->value=cell" 10)
+					hiRegTimer("leCreateInstLForm->viewName->value=view" 10)
+					leHiCreateInst( hiGetCurrentWindow() )
+				)
 			else
 				println( "Need a Lib AND a cell selected :) ")
 			) ; if
