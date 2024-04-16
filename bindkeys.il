@@ -579,7 +579,7 @@ hiSetBindKey("Schematics" "Ctrl Shift<Key>w" "plotTextWaves()")
 hiSetBindKey("Schematics" "Alt <Key>s" "_schHiSave()")
 
 load "~/SKILL/utils/tag_labels.il"
-hiSetBindKey("Schematics" "Ctrl Alt<Key>_" "tag_labels()")
+hiSetBindKey("Schematics" "Ctrl Alt<Key>_" "tag_labels()") ; ; underscore meaningful name nets side by side test-bench helper
 
 load "~/SKILL/utils/toglOnlyWireLblSel.il"
 hiSetBindKey("Schematics" "Ctrl Shift<Key>w" "toglOnlyWireLblSel()")
