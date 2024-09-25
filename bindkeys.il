@@ -683,3 +683,6 @@ load "~/SKILL/CCS/CCSvxlRaiseSchWin.il" ; raise schematic window used as conn re
 
 ; 2/25/24
 load "~/SKILL/utils/toggle_group.il" ; toggle group/ungroup with CTRL G
+
+; 9/25/24
+hiSetBindKey("vivaGraph" "Shift <Key>r" "_vivaAddSubwindow(\"rectangular\")") ; add a subwindow with SHIFT+R
