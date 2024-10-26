@@ -134,4 +134,6 @@ envSetVal("adexl.gui" "openSchInWin" 'boolean t)
 ; Shreyansh Dixit :
 envSetVal("asimenv.plotting" "artistPlottingMode" 'string "Append")
 
+; Kishlay Vyas (else paths give you min VIA enclosures):
+envSetVal("layout" "viaParamCalcMode" 'cyclic "viaDefDefaults")
 
