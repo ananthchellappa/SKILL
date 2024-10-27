@@ -353,7 +353,7 @@ hiSetBindKey("Symbol" "Ctrl<Key>-" "symIncreasePinSpacing(-1)")
 hiSetBindKey("Symbol" "Ctrl<Key>KP_Add" "symIncreasePinSpacing(1)") 
 hiSetBindKey("Symbol" "Ctrl<Key>KP_Subtract" "symIncreasePinSpacing(-1)") 
 
-hiSetBindKey( "Schematics" "Ctrl Shift<Key>s" "saved_sel = geGetSelSet()" )
+hiSetBindKey( "Schematics" "Ctrl Alt Shift<Key>s" "saved_sel = geGetSelSet()" )
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>l" "foreach( obj saved_sel geSelectObject(obj) )" )
 
 ; 9/1/16
