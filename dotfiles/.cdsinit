@@ -136,4 +136,5 @@ envSetVal("asimenv.plotting" "artistPlottingMode" 'string "Append")
 
 ; Kishlay Vyas (else paths give you min VIA enclosures):
 envSetVal("layout" "viaParamCalcMode" 'cyclic "viaDefDefaults")
+envSetVal("layout" "wireViaParamCalcMode" 'cyclic "viaDefDefaults")
 
