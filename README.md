@@ -1,7 +1,8 @@
 ## Ananth's SKILL helper compilation - Welcome!
 
 The 5-10 minutes you spend on this README is well worth it.
-YouTube video here : https://www.youtube.com/watch?v=raTVgloGCFg
+YouTube video here : https://www.youtube.com/watch?v=raTVgloGCFg  
+Also, please feel free to go to the Discussions tab and post ideas. Don't worry about being the first :)
 
 ### What is the SKILL repository?
 It is a collection of **utilities and settings** that boost productivity when using Cadence tools like the Virtuoso schematic editor. Mostly, the code has been created using the command logs that show up in the CIW (if not filtered) or the CDS.log. The gems - the difficult ones - depended heavily on help from Cadence AEs - thanks Sameer G, Praveena V, Vikas, Bhupendra, Lalit, Amit Sanadhya, Parul, Sudip, Pragati, Subrata, Ankush, Likesh and others I missed.. The utilities are accessed through keyboard shortcuts (bindkeys in Cadence parlance). The settings are mostly the key-bindings (utilities to key-combo) and other useful things like disabling the blinding (IC6) default grid (i.e., make it similar to IC5) and **(MUST) disabling the Menu-Access restrictions on the ALT and CTRL key** (else, you couldn't use ALT-x for what **you** want but for what Cadence **thinks** you should want :) (`ui enableMenuShortcuts boolean nil`)
