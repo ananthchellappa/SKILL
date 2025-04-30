@@ -1,4 +1,5 @@
 # `which perl` make_drf.pl
+# create display.drf_all using drDumpDrf("display.drf_all") in the Cadence CIW
 
 $sys_cmd = q{perl -p -e 's/solid/thickLine/ if /display\s+y\d\b/;' display.drf_all >> display.drf_thickLine};
 system( $sys_cmd ) unless -e 'display.drf_thickLine';
