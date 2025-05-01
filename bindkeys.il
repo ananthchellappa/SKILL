@@ -676,7 +676,7 @@ hiSetBindKey("Schematics" "Ctrl Shift <Key>n" "instTitleBlk()" )
 ; 2/15/24 - layout productivity
 hiSetBindKey( "Layout" "Ctrl <Key>h" "_leRotateOrFlip(\"MY\")" )
 hiSetBindKey( "Layout" "Ctrl <Key>u" "_leRotateOrFlip(\"MX\")" )
-load "~/SKILL/CCS/CCSeditViaRowsCols.il" # CTRL ALT/SHIFT/both mouse scroll wheel change via size
+load "~/SKILL/CCS/CCSeditViaRowsCols.il" ; CTRL ALT/SHIFT/both mouse scroll wheel change via size
 
 ; 2/22/24
 load "~/SKILL/CCS/CCSvxlRaiseSchWin.il" ; raise schematic window used as conn reference in layout XL ALT-H
