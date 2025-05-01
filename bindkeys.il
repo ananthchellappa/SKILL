@@ -521,8 +521,8 @@ hiSetBindKey("vivaGraph" "Ctrl<Key>d" "and(setq(sessionName awvGetCurrentWindow(
 hiSetBindKey("Schematics" "Ctrl Shift<Key>o" "{selectResults('dcOpInfo) report(?output \"param.txt\" ?format \"spice\")}")
 
 ;12/20/18 ; 01/23/19
-load "~/SKILL/utils/genNetlist.il"
-hiSetBindKey("Schematics" "Alt Shift<Key>n" "genNetlist()")
+;load "~/SKILL/utils/genNetlist.il"
+;hiSetBindKey("Schematics" "Alt Shift<Key>n" "genNetlist()")
 
 ;01/02/19
 hiSetBindKey("Schematics" "Alt Shift<Key>l" "ddsOpenLibManager()")
