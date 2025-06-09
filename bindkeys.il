@@ -536,3 +536,5 @@ load "~/SKILL/CCS/CCSvxlRaiseSchWin.il" ; ALT-H raises the schematic window used
 load "~/SKILL/utils/toggle_group.il" ; CTRL-G toggles group/ungroup in Layout
 ; 9/25/24
 hiSetBindKey("vivaGraph" "Shift <Key>r" "_vivaAddSubwindow(\"rectangular\")") ; add a subwindow with SHIFT+R
+; 6/9/25
+hiSetBindKey( "Symbol" "<Key>n" "schHiCreateNoteShape( ?shape \"line\" ?style \"solid\" ?width 0)") ; Creates a solid line note shape
