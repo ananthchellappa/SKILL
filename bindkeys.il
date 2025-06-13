@@ -538,3 +538,5 @@ load "~/SKILL/utils/toggle_group.il" ; CTRL-G toggles group/ungroup in Layout
 hiSetBindKey("vivaGraph" "Shift <Key>r" "_vivaAddSubwindow(\"rectangular\")") ; add a subwindow with SHIFT+R
 ; 6/9/25
 hiSetBindKey( "Symbol" "<Key>n" "schHiCreateNoteShape( ?shape \"line\" ?style \"solid\" ?width 0)") ; Creates a solid line note shape
+; 6/13/25
+hiSetBindKey("Schematics" "<Key>F5" "hiDeiconifyWindow(window(1)) && hiRaiseWindow(window(1))") ; focus CIW
