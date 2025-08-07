@@ -65,3 +65,4 @@ schematic   srcPinNetCollision           cyclic    "warning"
 ;envSetVal("auCore.selection" "includeAsBundle" 'boolean nil)
 auCore.selection includeAsBundle boolean nil
 
+adexl.simulation	saveLastNHistoryEntries	int	30
