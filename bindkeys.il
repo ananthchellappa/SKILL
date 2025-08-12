@@ -540,3 +540,5 @@ hiSetBindKey("vivaGraph" "Shift <Key>r" "_vivaAddSubwindow(\"rectangular\")") ; 
 hiSetBindKey( "Symbol" "<Key>n" "schHiCreateNoteShape( ?shape \"line\" ?style \"solid\" ?width 0)") ; Creates a solid line note shape
 ; 6/13/25
 hiSetBindKey("Schematics" "<Key>F5" "hiDeiconifyWindow(window(1)) && hiRaiseWindow(window(1))") ; focus CIW
+; 8/11/25
+hiSetBindKey("Virtuoso XL" "Ctrl Shift <Key>i" "lxHiCreateInstFromSch()") ; in layout XL - import selected from schematic
