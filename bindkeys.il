@@ -542,3 +542,5 @@ hiSetBindKey( "Symbol" "<Key>n" "schHiCreateNoteShape( ?shape \"line\" ?style \"
 hiSetBindKey("Schematics" "<Key>F5" "hiDeiconifyWindow(window(1)) && hiRaiseWindow(window(1))") ; focus CIW
 ; 8/11/25
 hiSetBindKey("Virtuoso XL" "Ctrl Shift <Key>i" "lxHiCreateInstFromSch()") ; in layout XL - import selected from schematic
+; 8/29/25
+hiSetBindKey( "vivaGraph" "Shift <key>m" "vvExecuteAction(\"moveTracesNewStrip\")") ; move the selected trace to a new strip
