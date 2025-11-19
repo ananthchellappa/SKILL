@@ -1,0 +1,21 @@
+# Adobe PostScript Level 2 Plotter
+#
+Color PostScript(2)|Generic 300 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+	:spool=lpr: \
+	:queue=lpq: \
+        :maximumPages#30: \
+        :resolution#300: \
+        :paperSize="A" 2400 3150 75 75:
+
+# Adobe PostScript Level 1 Plotter
+#
+Black & White PostScript(1)|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+	:spool=lpr: \
+	:queue=lpq: \
+        :maximumPages#30: \
+        :resolution#300: \
+        :paperSize="A" 2400 3150 75 75:
