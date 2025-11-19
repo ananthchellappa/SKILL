@@ -350,7 +350,7 @@ load "~/SKILL/utils/openSelReadOnly.il" ; CTRL-SHIFT-N opens selected cell view 
 ; 5/18/17
 hiSetBindKey("Schematics" "Alt Shift<Key>h" "heHiEditConfig()") ; Launches Hierarchy Editor config view
 ; 11/11/17
-hiSetBindKey( "Schematics" "Ctrl <Key>c" "schHiCreateNoteShape( ?shape \"ellipse\" ?style \"dashed\")" ) ; Creates a dashed ellipse note shape
+hiSetBindKey( "Schematics" "Ctrl <Key>c" "if( geGetWindowCellView()~>mode != \"r\" then schHiCreateNoteShape( ?shape \"ellipse\" ?style \"dashed\"))" ) ; Creates a dashed ellipse note shape
 ; 1/3/17
 hiSetBindKey("Layout" "Alt <Key>v" "pteSetVisible(\"Vias\" !pteIsVisible(\"Vias\" \"Objects\") \"Objects\")" ) ; Toggles visibility of Vias objects
 ; 3/20/18
