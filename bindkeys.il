@@ -106,7 +106,7 @@ hiSetBindKey("Schematics" "Alt<Key>z" "CCSrectSelect()") ; Enables rectangular s
 hiSetBindKey("Schematics" "Shift<Btn4Down>"
 "mapcar(lambda((obj) obj->font = or(cadr(member(obj->font '( \"fixed\" \"roman\" \"stick\" ))) \"fixed\")) setof(obj geGetSelSet() obj->objType == \"label\") )") ; Cycles selected label fonts
 ; for Vikas
-load("~/SKILL/utils/zoom_kais.il")
+load("~/SKILL/CCS/zoom_kais.il")
 ; 1/31/2013 - moved zoomInst here after glitch today.. need CCSclip
 load("~/SKILL/utils/zoomInst.il")
 ; 8/23/2013
