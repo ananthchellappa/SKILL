@@ -39,7 +39,7 @@ envSetVal("asimenv.loadstate" "modelSetup" 'boolean t)
 ; working with Pragati Kumar 46006198 trying to get instances with inh conns to probed
 ; net to be highlighted..
 
-envSetVal("graphic" "probeNetDisplayHierarchyLevel" 'int 100)
+envSetVal("graphic" "probeNetDisplayHierarchyLevel" 'int 30)
 envSetVal("graphic" "probeTraverseHierarchy" 'boolean t) 
 ; found below one to not be necessary
 ; envSetVal("graphic" "probeConnectedInstances" 'boolean t)
