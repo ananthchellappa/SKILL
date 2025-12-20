@@ -544,3 +544,5 @@ hiSetBindKey("Schematics" "<Key>F5" "hiDeiconifyWindow(window(1)) && hiRaiseWind
 hiSetBindKey("Virtuoso XL" "Ctrl Shift <Key>i" "lxHiCreateInstFromSch()") ; in layout XL - import selected from schematic
 ; 8/29/25
 hiSetBindKey( "vivaGraph" "Shift <key>m" "vvExecuteAction(\"moveTracesNewStrip\")") ; move the selected trace to a new strip
+; 12/19/25
+hiSetBindKey("Schematics" "Ctrl Alt Shift <Key>x" "descend_lowest_itrnum()")
