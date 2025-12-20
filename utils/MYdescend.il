@@ -75,3 +75,17 @@ procedure( desc_new_tab( tab_opt )
 		envSetVal("schematic" "descendCanvasType" 'string rv)
 	)
 )
+
+procedure( descend_lowest_itrnum()
+	let( (iname name_bits)
+		if( 1 == length( geGetSelSet() )
+		then
+		    iname = car(geGetSelSet())~>name
+		    if( rexMatchp(":" iname) 
+		    then
+		        name_bits = parseString(iname "<:>")
+			CCSNoQueryUserSchHiDescend(atoi(nthelem(3 name_bits)))
+		    )
+		)
+	)
+)
