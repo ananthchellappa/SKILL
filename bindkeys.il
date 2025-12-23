@@ -291,7 +291,7 @@ hiSetBindKey( "Schematics" "Ctrl Shift<Key>l" "foreach( obj saved_sel geSelectOb
 ; 9/1/16
 ; hiSetBindKey( "Schematics" "Ctrl Shift<Key>x" "geHiDeleteAllMarker()" )
 ; 10/28/17
-hiSetBindKey( "Schematics" "Ctrl Shift<Key>x" "geDeleteAllMarker( geGetEditCellView())" ) ; Deletes all markers
+hiSetBindKey( "Schematics" "Ctrl Shift<Key>x" "geDeleteAllMarker( geGetEditCellView()) nil nil nil" ) ; Deletes all markers 12/22/25 long overdue
 ; 9/3/16
 load( "~/SKILL/utils/pinName2ClipBoard.il" ) ; CTRL-SHIFT-C copies selected pin name to clipboard
 hiSetBindKey( "Schematics" "Ctrl Shift<Key>c" "pinName2ClipBoard()" ) ; Copies selected pin name to clipboard
