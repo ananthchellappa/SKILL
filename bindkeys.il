@@ -546,3 +546,5 @@ hiSetBindKey("Virtuoso XL" "Ctrl Shift <Key>i" "lxHiCreateInstFromSch()") ; in l
 hiSetBindKey( "vivaGraph" "Shift <key>m" "vvExecuteAction(\"moveTracesNewStrip\")") ; move the selected trace to a new strip
 ; 12/19/25
 hiSetBindKey("Schematics" "Ctrl Alt Shift <Key>x" "descend_lowest_itrnum()")
+; 12/30/25
+hiSetBindKey( "Cadence Hierarchy Editor" "Ctrl <Key>2" "_hedTriggerActionCB(\"toggleEditable\")" )
