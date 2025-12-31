@@ -138,3 +138,8 @@ envSetVal("asimenv.plotting" "artistPlottingMode" 'string "Append")
 envSetVal("layout" "viaParamCalcMode" 'cyclic "viaDefDefaults")
 envSetVal("layout" "wireViaParamCalcMode" 'cyclic "viaDefDefaults")
 
+load "~/SKILL/CCS/CCSgetSimTimeTotal.il"
+; load "~/SKILL/utils/auto_RO.il"		; automatically convert idle Edit-mode schematic/symbol windows to read-only - check in license
+
+
+
