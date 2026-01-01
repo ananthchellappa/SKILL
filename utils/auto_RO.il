@@ -51,7 +51,7 @@ procedure( AutoRO_checkOnce()
             )
             AutoRO_makeWindowCurrent(win)
             geChangeEditMode("r")
-			printf("Changed %s to Read-Only mode" cv~>cellName)
+            printf("Changed %s to Read-Only mode" cv~>cellName)
 
           )
         )
