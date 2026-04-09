@@ -3,6 +3,7 @@
 The 5-10 minutes you spend on this README is well worth it.
 YouTube video here : https://www.youtube.com/watch?v=raTVgloGCFg  
 Also, please feel free to go to the Discussions tab and post ideas. Don't worry about being the first :)
+See if these help out: https://cadencetips.blogspot.com/ and https://ananthskaizen.blogspot.com/2022/05/the-productive-setup.html
 ____________________________________________________________________________________________________________________
 NEWS : bindkeys.il now has comments that should make it easy to use the search.pl to quickly find the bk of interest.  Find search.pl in the perl repo
 Just use an alias that does search.pl -f /path/to/bindkey.il <search terms> # Eg. sbk pin selection # to find that CTRL-P does this
